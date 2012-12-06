@@ -76,6 +76,152 @@
                     </div>
                 </div>
             </section>
+            <section id="formulaire">
+                <div class="row">
+                    <div class="span12">
+                        <h2>Sondage pour les personnes intéressées</h2>
+
+                        <p>Le but de ce formulaire est d'avoir une première idée du nombres de personnes intéressées 
+                        et de leurs envies.</p> 
+
+                        <form class="form-horizontal well">
+                            <div class="control-group">
+                                <label class="control-label" for="nom">Nom</label>
+                                <div class="controls">
+                                    <input type="text" id="nom" name="nom">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="prenom">Prénom</label>
+                                <div class="controls">
+                                    <input type="text" id="prenom" name="prenom">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="mail">Adresse mail</label>
+                                <div class="controls">
+                                    <input type="text" id="mail" name="mail">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="twitter">Compte twitter</label>
+                                <div class="controls">
+                                    <input type="text" id="twitter" name="twitter">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="homepage">Home page</label>
+                                <div class="controls">
+                                    <input type="text" id="homepage" name="homepage">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="ville">Ville</label>
+                                <div class="controls">
+                                    <input type="text" id="ville" name="ville">
+                                </div>
+                            </div>
+                            <hr style="width: 200px; margin: 20px auto; border-bottom: 1px solid #ccc;" />
+                            <div class="control-group">
+                                <label class="control-label" for="utilisation_coworking">Espace coworking</label>
+                                <div class="controls">
+                                    <select id="utilisation_coworking" name="utilisation_coworking" class="input-xxlarge">
+                                        <option selected="selected" value="pas-interesse">Je ne suis pas intéressé par l'espace de coworking</option>
+                                        <option value="ponctuellement">Je suis intéressé pour venir ponctuellement l'espace coworking</option>
+                                        <option value="1-jour">Je suis intéressé pour utiliser environ 1 jour par semaine l'espace coworking</option>
+                                        <option value="2-jours">Je suis intéressé pour utiliser environ 2 jours par semaine l'espace coworking</option>
+                                        <option value="3-jours">Je suis intéressé pour utiliser environ 3 jours par semaine l'espace coworking</option>
+                                        <option value="4-jours">Je suis intéressé pour utiliser environ 4 jours par semaine l'espace coworking</option>
+                                        <option value="5-jours">Je suis intéressé pour utiliser environ 5 jours par semaine l'espace coworking</option>
+                                    </select>
+                                    <span class="help-block">Exemples de tarifs : 
+                                        <a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">la cantine de Rênnes</a>,
+                                        <a href="http://cantine.atlantic2.org/coworking-nantes/tarifs/">la cantine de Nantes</a>, 
+                                        <a href="http://coworking-nancy.fr/coworking/">À Nancy</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="type_besoin_coworking">Votre besoin dans l'espace coworking</label>
+                                <div class="controls">
+                                    <select id="utilisation_coworking" name="utilisation_coworking" class="input-xxlarge">
+                                        <option selected="selected" value="pas-interesse">Je ne suis pas intéressé par l'espace de coworking</option>
+                                        <option value="emplacement-libre">Un emplacement libre en open space dans l'espace de coworking</option>
+                                        <option value="emplacement-fixe">Un emplacement fixe en open space dans l'espace de coworking</option>
+                                        <option value="espace-ferme">Un espace fermé (bureau) dans l'espace de coworking</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Je serais intéressé par ce lieu <strong>pour assister</strong> à des ateliers, conférences, débats…
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Je serais intéressé par ce lieu <strong>pour organiser, animer</strong> un ou plusieurs ateliers, conférences, débats…
+                                    </label>
+                                </div>
+                            </div>
+                            <hr style="width: 200px; margin: 20px auto; border-bottom: 1px solid #ccc;" />
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> J'autorise la publication de des données de ce formulaire sur le site <a href="http://coworking.a-metz.info">coworking.a-metz.info</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <button type="submit" class="btn">Envoyer…</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="liste-de-personnes-interesses">
+                <div class="row">
+                    <div class="span12">
+                        <h2>Liste de personnes intéressés</h2>
+
+                        <p>Liste de personnes intéressés par cette espace de coworking, lieu de rencontre.</p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">
+                                    </th>
+                                    <th rowspan="2">
+                                        Intéret pour l'espace de coworking
+                                    </th>
+                                    <th colspan="2">
+                                        Événements, ateliers
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Assister
+                                    </th>
+                                    <th>
+                                        Organiser, animer…
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="center"><a href="mailto:contact@stephane-klein.info">Stéphane Klein</a></td>
+                                <td>1 jour par semaine de coworking en emplacement libre</td>
+                                <td class="center">X</td>
+                                <td class="center">X</td>
+                            </tr>
+                        </table>
+
+                        <p>Vous pouvez être ajouté à cette liste en renseignant le <a href="#formulaire">formulaire ci-dessus</a>.</p>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div class="row">
                     <div class="span12">
