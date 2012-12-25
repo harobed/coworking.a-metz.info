@@ -5228,7 +5228,7 @@ div.subnav .nav > li.dropdown.open > .dropdown-toggle:hover {
   border-color: #2ba949;
 }
 .alert {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+/*  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
 }
 .alert h1,
 .alert h2,
