@@ -1,5 +1,6 @@
 HEADER {
-    padding: 20px 0 20px 0;
+    padding: 40px 0 20px 0;
+    position: relative;
     H1 {
         margin: 0 0 5px 0;
     }
@@ -10,10 +11,66 @@ HEADER {
         letter-spacing:1px;
         font-style: italic;
     }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        width: 140px;
+    }
 }
 
 H2 {
     margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #EEEEEE;
+    position: relative;
+}
+
+A.deep-link {
+    background: url("../img/link_16.png") repeat scroll 0 0 transparent;
+    display: block;
+    height: 16px;
+    margin-top: -8px;
+    opacity: 0.1;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transition: opacity 0.5s linear 0s;
+    width: 16px;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.en-savoir-plus {
+    font-size: 12px;
+    text-align: right;
+}
+
+.affiche {
+    max-width: 420px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    opacity: 0.4;
+    transition: opacity 0.5s linear 0s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.box {
+    background-color: #DCEAF4;
+    padding:20px;
+    border-radius: 6px 6px 6px 6px;
+
+    H3 {
+        margin-top: 0;
+    }
+
+    margin-bottom: 20px;
 }
 
 SECTION {
