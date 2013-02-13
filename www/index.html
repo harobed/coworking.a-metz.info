@@ -529,7 +529,7 @@
 
                 </div><!-- row -->
             </section>
-            <section id="#supports-de-communication">
+            <section id="supports-de-communication">
                 <div class="row">
                     <div class="span12">
                         <h2>Supports de communication<a href="#supports-de-communication" class="deep-link"></a></h2>
@@ -588,13 +588,14 @@
                 </div>
             </section>
         </div><!-- container -->
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="container">
                 <a href="http://coworking.a-metz.info">Espace coworking Metz</a> — <a href="contact@stephane-klein.info">contact@stephane-klein.info</a> — <a href="https://github.com/harobed/coworking.a-metz.info">code source</a>
             </div>
         </footer>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/waypoints.min.js"></script>
         <script type="text/javascript" charset="utf-8">
             $(window).ready(function() {
                 $('[name="survey-form"]').submit(function() {
@@ -614,6 +615,129 @@
                 });
                 $(".alert").alert();
             });
+            $(window).load(function() {
+                $('#qu-est-ce-que-serait-ce-lieux').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(1);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#source-d-inspiration').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(2);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#contexte').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(3);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#feuille-de-route').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(4);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#formulaire').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(5);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#liste-de-personnes-interessees').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(6);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#complement-information-espace-coworking').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(7);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#complement-information-espace-de-rencontre').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(8);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#supports-de-communication').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(9);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#liens-externes').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(10);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+
+                $('#footer').waypoint(
+                    function(direction) {
+                        piwikTracker.trackGoal(11);
+                    }, 
+                    {
+                        offset: 'bottom-in-view',
+                        triggerOnce: true
+                    }
+                );
+            });
         </script>
+        <!-- Piwik -->
+        <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.stephane-klein.info/" : "http://piwik.stephane-klein.info/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script type="text/javascript">
+        try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+        </script><noscript><p><img src="http://piwik.stephane-klein.info/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+        <!-- End Piwik Tracking Code -->
     </body>
 </html>
