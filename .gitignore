@@ -1,1 +1,11 @@
 .DS_Store
+.Python
+bin/
+build/
+*.pyc
+include/
+lib/
+www/static/.sass-cache/
+www/static/.webassets-cache/
+www/static/build/
+www/static/components/

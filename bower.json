@@ -1,0 +1,7 @@
+{
+    "dependencies": {
+        "sass-bootstrap": "2.3.1",
+        "jquery": "*",
+        "jquery-waypoints": "*"
+    }
+}

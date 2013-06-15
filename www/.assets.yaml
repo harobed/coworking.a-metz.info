@@ -1,0 +1,22 @@
+directory: static
+url: /static
+debug: False
+updater: timestamp
+bundles:
+    main_js:
+        filters: rjsmin
+        output: build/main.js
+        contents:
+            - components/jquery-waypoints/waypoints.js
+            - components/sass-bootstrap/js/bootstrap-alert.js
+
+    main_css:
+        filters:
+            - compass
+            - scss
+            - cssrewrite
+            - cssmin
+        output: build/main.css
+        contents:
+            - components/sass-bootstrap/lib/bootstrap.scss
+            - css/main.scss

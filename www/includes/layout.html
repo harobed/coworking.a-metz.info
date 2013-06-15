@@ -1,0 +1,42 @@
+# -*- encoding:utf-8 -*-
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <title>Projet d'espace de Coworking à Metz<%block name="title"/></title>
+
+        <script charset="utf-8" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        % for url in assets['main_css'].urls():
+            <link rel="stylesheet" href="${root_path(url)}" type="text/css" media="screen" charset="utf-8" />
+        % endfor
+        % for url in assets['main_js'].urls():
+            <script src="${root_path(url)}" type="text/javascript" charset="utf-8"></script>
+        % endfor
+    </head>
+<body>
+    <a href="https://github.com/harobed/coworking.a-metz.info"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <div id="layout">
+        <div class="container">
+            ${self.body()}
+        <div id="layout-footer"></div>
+    </div><!-- layout -->
+    <div id="footer">
+        <div class="container">
+            <a href="http://coworking.a-metz.info">Espace coworking Metz</a> — <a href="contact@stephane-klein.info">contact@stephane-klein.info</a> — <a href="https://github.com/harobed/coworking.a-metz.info">code source</a>
+        </div><!-- container -->
+    </div><!-- footer -->
+    <!-- Piwik -->
+    <script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.stephane-klein.info/" : "http://piwik.stephane-klein.info/");
+    document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script type="text/javascript">
+    try {
+    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+    piwikTracker.trackPageView();
+    piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+    </script><noscript><p><img src="http://piwik.stephane-klein.info/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+    <!-- End Piwik Tracking Code -->
+</body>
+</html>

@@ -1,150 +1,141 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Espace de Coworking à Metz - Une cantine numérique</title>
-        <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
-        <link href="css/screen.less" rel="stylesheet/less" type="text/css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/less.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <a href="https://github.com/harobed/coworking.a-metz.info"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-        <div class="container">
-            <header>
-                <div class="row">
-                    <div class="span6">
-                        <h1>Coworking à Metz</h1>
-                        <p class="lead">Projet de création d'une cantine numérique</p>
+# -*- encoding:utf-8 -*-
+<%inherit file="includes/layout.html"/>
 
-                        <img 
-                            class="logo"
-                            src="img/coworking_logo.png"
-                            title="Logo du mouvement coworking"
-                            />
-                    </div>
-                </div><!-- row -->
-            </header>
-            <section>
-                <div class="row">
-                    <div class="span12">
-                        <blockquote>
-                            <p class="lead">
-                            « Bonjour, j'ai décidé de créer ce site <a href="http://coworking.a-metz.info">coworking.a-metz.info</a> 
-                            afin de rassembler les informations concernant un projet de création d'un espace de 
-                            <a href="http://fr.wikipedia.org/wiki/Coworking">Coworking</a> à <a href="http://fr.wikipedia.org/wiki/Metz">Metz</a>
-                            (ou dans la région messine). »</p>
-                            <small class="pull-right"><a href="http://stephane-klein.info">Stéphane Klein</a>, le 25 décembre 2012</small>
-                        </blockquote>
-                    </div>
-                </div>
-            </section>
-            <section id="qu-est-ce-que-serait-ce-lieux">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Qu'est-ce que serait ce lieu ?<a href="#qu-est-ce-que-serait-ce-lieux" class="deep-link"></a></h2>
+<div class="container">
+    <header>
+        <div class="row">
+            <div class="span6">
+                <h1>Coworking à Metz</h1>
+                <p class="lead">Projet de création d'une cantine numérique</p>
 
-                        <p>Ce lieu aurait deux composantes :</p>
-                    </div><!-- span12 -->
-                    <div class="span6">
-                        <div class="box">
-                            <h3>Un espace de coworking</h3>
+                <img 
+                    class="logo"
+                    src="img/coworking_logo.png"
+                    title="Logo du mouvement coworking"
+                    />
+            </div>
+        </div><!-- row -->
+    </header>
+    <section>
+        <div class="row">
+            <div class="span12">
+                <blockquote>
+                    <p class="lead">
+                    « Bonjour, j'ai décidé de créer ce site <a href="http://coworking.a-metz.info">coworking.a-metz.info</a> 
+                    afin de rassembler les informations concernant un projet de création d'un espace de 
+                    <a href="http://fr.wikipedia.org/wiki/Coworking">Coworking</a> à <a href="http://fr.wikipedia.org/wiki/Metz">Metz</a>
+                    (ou dans la région messine). »</p>
+                    <small class="pull-right"><a href="http://stephane-klein.info">Stéphane Klein</a>, le 25 décembre 2012</small>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <section id="qu-est-ce-que-serait-ce-lieux">
+        <div class="row">
+            <div class="span12">
+                <h2>Qu'est-ce que serait ce lieu ?<a href="#qu-est-ce-que-serait-ce-lieux" class="deep-link"></a></h2>
 
-                            <p>Un espace de travail partagé où on y rencontre un réseau de travailleurs du numérique,
-                            encourageant l'échange et l'ouverture.</p>
+                <p>Ce lieu aurait deux composantes :</p>
+            </div><!-- span12 -->
+            <div class="span6">
+                <div class="box">
+                    <h3>Un espace de coworking</h3>
 
-                            <div class="en-savoir-plus">
-                                <a href="#complement-information-espace-coworking">plus d'information…</a>
-                            </div>
-                        </div>
-                    </div><!-- span6 -->
-                    <div class="span6">
-                        <div class="box">
-                            <h3>Un espace de rencontre</h3>
+                    <p>Un espace de travail partagé où on y rencontre un réseau de travailleurs du numérique,
+                    encourageant l'échange et l'ouverture.</p>
 
-                            <p>Un espace pour le partage et la transmission de connaissances par des pairs prenant 
-                            souvent la forme d'ateliers, présentations et conférences.</p>
-
-                            <div class="en-savoir-plus">
-                                <a href="#complement-information-espace-de-rencontre">plus d'information…</a>
-                            </div>
-                        </div>
-                    </div><!-- span6 -->
-                    <div class="span12">
-                        <p>Vous êtes intéressé par au moins l'un de ces deux espaces ? alors faites nous le savoir
-                        en renseignant notre <a href="#formulaire">formulaire de sondage…</a></p>
-                    </div><!-- span12 -->
-                    <div class="span12">
-                        <p>Questions fréquemment posées :</p>
-                        
-                        <ul>
-                            <li><a href="#q1">J'ai bien compris que c'est un projet… mais alors il est où le business plan ?</a></li>
-                            <li><a href="#q2">Est-ce que ce lieu est limité aux travailleur du web ?</a></li>
-                            <li><a href="#q3">Ça ouvre quand ?</a></li>
-                            <li><a href="#q4">Quelle surface ?</a></li>
-                            <li><a href="#q5">Quel est le lien entre le projet d'espace de Coworking et le GOALL</a></li>
-                            <li><a href="#q6">Quels seront les tarifs ?</a></li>
-                            <li><a href="#q7">Quelles différences avec un télécentre (exemple Regus) ?</a></li>
-                        </ul>
-                    </div><!-- span12 -->
-                </div>
-            </section>
-            <section id="source-d-inspiration">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Sources d'inspiration<a href="#source-d-inspiration" class="deep-link"></a></h2>
-
-                        <ul>
-                            <li><a href="http://www.mutinerie.org/">Mutinerie</a> - espace de coworking dans le 19ème à Paris - 90 coworkers.</li>
-                            <li><a href="http://www.poudriere.org/">La Poudrière</a> est un espace de travail partagé, collaboratif et ouvert,
-                            mais aussi un réseau et une communauté d’entrepreneurs à l’échelle de l’agglomération nancéienne - 16 coworkers.</li>
-                            <li><a href="http://www.atelier-medias.org/">L’Atelier des Médias</a> est un projet collectif et innovant de coworking à Lyon, 
-                            un espace partagé de travail, imaginé par et pour les professionnels indépendants des médias, du web et de l’image - 38 coworkers.</li>
-                            <li><a href="http://www.la-cordee.net">La Cordée</a> à Lyon - 120 coworkers.</li>
-                            <li><a href="http://lacantine.org/">La Cantine by Silicon Sentier</a> à Paris, premier espace de coworking ouvert en France en 2008. En tant que Cantine, elle est orientée communauté d'entreprises.</li>
-                            <li><a href="http://www.lacantine-rennes.net/">La Cantine numérique rennaise</a>.</li>
-                            <li><a href="http://cantine.atlantic2.org">La Cantine by Atlantic 2.0</a> - 309 coworkers.</li>
-                            <li><a href="http://lacantine-toulouse.org">La Cantine Toulouse</a>.</li>
-                            <li><a href="http://bxno.de">Le Node</a> à Bordeaux - 80 coworkers.</li>
-                            <li><a href="http://www.lacoroutine.org">La coroutine</a> à Lille.</li>
-                            <li><a href="http://www.coworkinglille.com">Coworking Lille.</a></li>
-                            <li><a href="http://www.laplagedigitale.eu">La Plage Digitale</a> à Strasbourg.</li>
-                            <li>...</li>
-                        </ul>
+                    <div class="en-savoir-plus">
+                        <a href="#complement-information-espace-coworking">plus d'information…</a>
                     </div>
                 </div>
-            </section>
-            <section id="contexte">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Contexte<a href="#contexte" class="deep-link"></a></h2>
+            </div><!-- span6 -->
+            <div class="span6">
+                <div class="box">
+                    <h3>Un espace de rencontre</h3>
 
-                        <p>Depuis août 2012, j'ai rencontré de nombreuses personnes intéressées par la création
-                        d'un <a href="http://fr.wikipedia.org/wiki/Coworking">espace de coworking</a> 
-                        (type <a href="http://reseaudescantines.org/">Cantinue numérique</a>) et d'un 
-                        <a href="http://fr.wikipedia.org/wiki/Fablab">fablab</a> sur <a href="http://fr.wikipedia.org/wiki/Metz">Metz</a>.</p>
+                    <p>Un espace pour le partage et la transmission de connaissances par des pairs prenant 
+                    souvent la forme d'ateliers, présentations et conférences.</p>
 
-                        <p>Après concertation, j'ai pris l'initiative de porter le projet d'espace de coworking.<br />
-                        <a href="mailto:rondel_caroline@yahoo.fr">Caroline Rondel</a> a pris le lead sur le Fablab.</p>
+                    <div class="en-savoir-plus">
+                        <a href="#complement-information-espace-de-rencontre">plus d'information…</a>
                     </div>
                 </div>
-            </section>
-            <section id="contact">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Contact<a href="#contact" class="deep-link"></a></h2>
+            </div><!-- span6 -->
+            <div class="span12">
+                <p>Vous êtes intéressé par au moins l'un de ces deux espaces ? alors faites nous le savoir
+                en renseignant notre <a href="#formulaire">formulaire de sondage…</a></p>
+            </div><!-- span12 -->
+            <div class="span12">
+                <p>Questions fréquemment posées :</p>
+                
+                <ul>
+                    <li><a href="#q1">J'ai bien compris que c'est un projet… mais alors il est où le business plan ?</a></li>
+                    <li><a href="#q2">Est-ce que ce lieu est limité aux travailleur du web ?</a></li>
+                    <li><a href="#q3">Ça ouvre quand ?</a></li>
+                    <li><a href="#q4">Quelle surface ?</a></li>
+                    <li><a href="#q5">Quel est le lien entre le projet d'espace de Coworking et le GOALL</a></li>
+                    <li><a href="#q6">Quels seront les tarifs ?</a></li>
+                    <li><a href="#q7">Quelles différences avec un télécentre (exemple Regus) ?</a></li>
+                </ul>
+            </div><!-- span12 -->
+        </div>
+    </section>
+    <section id="source-d-inspiration">
+        <div class="row">
+            <div class="span12">
+                <h2>Sources d'inspiration<a href="#source-d-inspiration" class="deep-link"></a></h2>
 
-                        <p>Si vous avez des questions, si vous souhaitez contribuer au projet n'hésitez pas à 
-                        m'écrire à <a href="mailto:contact@stephane-klein.info">contact@stephane-klein.info</a>.</p>
-                        <p>Pour suivre le projet, vous pouvez aussi vous <a href="https://groups.google.com/forum/?fromgroups#!forum/coworking-metz">inscrire</a> à la liste de 
-                        discussion <a href="https://groups.google.com/forum/?fromgroups#!forum/coworking-metz">« Coworking à Metz »</a> (Google Groupe).</p>
-                    </div>
-                    <div class="span4">
-                        <a href="https://twitter.com/CoworkingMetz" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @CoworkingMetz</a>
+                <ul>
+                    <li><a href="http://www.mutinerie.org/">Mutinerie</a> - espace de coworking dans le 19ème à Paris - 90 coworkers.</li>
+                    <li><a href="http://www.poudriere.org/">La Poudrière</a> est un espace de travail partagé, collaboratif et ouvert,
+                    mais aussi un réseau et une communauté d’entrepreneurs à l’échelle de l’agglomération nancéienne - 16 coworkers.</li>
+                    <li><a href="http://www.atelier-medias.org/">L’Atelier des Médias</a> est un projet collectif et innovant de coworking à Lyon, 
+                    un espace partagé de travail, imaginé par et pour les professionnels indépendants des médias, du web et de l’image - 38 coworkers.</li>
+                    <li><a href="http://www.la-cordee.net">La Cordée</a> à Lyon - 120 coworkers.</li>
+                    <li><a href="http://lacantine.org/">La Cantine by Silicon Sentier</a> à Paris, premier espace de coworking ouvert en France en 2008. En tant que Cantine, elle est orientée communauté d'entreprises.</li>
+                    <li><a href="http://www.lacantine-rennes.net/">La Cantine numérique rennaise</a>.</li>
+                    <li><a href="http://cantine.atlantic2.org">La Cantine by Atlantic 2.0</a> - 309 coworkers.</li>
+                    <li><a href="http://lacantine-toulouse.org">La Cantine Toulouse</a>.</li>
+                    <li><a href="http://bxno.de">Le Node</a> à Bordeaux - 80 coworkers.</li>
+                    <li><a href="http://www.lacoroutine.org">La coroutine</a> à Lille.</li>
+                    <li><a href="http://www.coworkinglille.com">Coworking Lille.</a></li>
+                    <li><a href="http://www.laplagedigitale.eu">La Plage Digitale</a> à Strasbourg.</li>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contexte">
+        <div class="row">
+            <div class="span12">
+                <h2>Contexte<a href="#contexte" class="deep-link"></a></h2>
+
+                <p>Depuis août 2012, j'ai rencontré de nombreuses personnes intéressées par la création
+                d'un <a href="http://fr.wikipedia.org/wiki/Coworking">espace de coworking</a> 
+                (type <a href="http://reseaudescantines.org/">Cantinue numérique</a>) et d'un 
+                <a href="http://fr.wikipedia.org/wiki/Fablab">fablab</a> sur <a href="http://fr.wikipedia.org/wiki/Metz">Metz</a>.</p>
+
+                <p>Après concertation, j'ai pris l'initiative de porter le projet d'espace de coworking.<br />
+                <a href="mailto:rondel_caroline@yahoo.fr">Caroline Rondel</a> a pris le lead sur le Fablab.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="row">
+            <div class="span12">
+                <h2>Contact<a href="#contact" class="deep-link"></a></h2>
+
+                <p>Si vous avez des questions, si vous souhaitez contribuer au projet n'hésitez pas à 
+                m'écrire à <a href="mailto:contact@stephane-klein.info">contact@stephane-klein.info</a>.</p>
+                <p>Pour suivre le projet, vous pouvez aussi vous <a href="https://groups.google.com/forum/?fromgroups#!forum/coworking-metz">inscrire</a> à la liste de 
+                discussion <a href="https://groups.google.com/forum/?fromgroups#!forum/coworking-metz">« Coworking à Metz »</a> (Google Groupe).</p>
+            </div>
+            <div class="span4">
+                <a href="https://twitter.com/CoworkingMetz" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @CoworkingMetz</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                    </div>
-                    <div class="span4">
-                        <div id="fb-root"></div>
+            </div>
+            <div class="span4">
+                <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) return;
@@ -153,803 +144,795 @@ js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-                        <div class="fb-follow" data-href="https://www.facebook.com/CoworkingMetz" data-show-faces="true" data-width="280"></div>
-                    </div>
-                    <div class="span4">
-                        <div class="fb-like" data-href="https://www.facebook.com/CoworkingMetz" data-send="false" data-width="280" data-show-faces="true"></div>
-                    </div>
-                </div>
-            </section>
-            <section id="feuille-de-route">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Feuille de route<a href="#feuille-de-route" class="deep-link"></a></h2>
+                <div class="fb-follow" data-href="https://www.facebook.com/CoworkingMetz" data-show-faces="true" data-width="280"></div>
+            </div>
+            <div class="span4">
+                <div class="fb-like" data-href="https://www.facebook.com/CoworkingMetz" data-send="false" data-width="280" data-show-faces="true"></div>
+            </div>
+        </div>
+    </section>
+    <section id="feuille-de-route">
+        <div class="row">
+            <div class="span12">
+                <h2>Feuille de route<a href="#feuille-de-route" class="deep-link"></a></h2>
 
-                        <ul>
-                            <li>Étude des espaces de coworking existant en France — <span class="label label-info">Fait</span></li>
-                            <li>Réalisation d'un support de présentation pour expliquer le concept d'espace de coworking de type cantinue numérique — <span class="label label-info">Fait</span><br />
-                            <a href="https://docs.google.com/presentation/pub?id=15peXc0ncRXTufunyoPbmltZuJpnrMuVGJFmJyeCePUc&start=false&loop=false&delayms=3000">Voici le résultat…</a></li>
-                            <li>Mise en place d'un sondage pour estimer et avoir une liste de personnes intéressées — <span class="label label-info">Fait</span></li>
-                            <li>Faire la promotion du sondage dans la région messine <span class="label label-info">En cours</span></li>
-                            <li>Réalisation d'un support de présentation du projet (budget de fonctionnement, d'initialisation, besoins…) — <span class="label label-info">En cours</span></li>
-                            <li>Établir une liste de personnes à contacter — <span class="label label-info">En cours</span></li>
-                            <li>Rencontrer les personnes — <span class="label label-info">À faire</span></li>
-                            <li>…</li>
-                        </ul>
+                <ul>
+                    <li>Étude des espaces de coworking existant en France — <span class="label label-info">Fait</span></li>
+                    <li>Réalisation d'un support de présentation pour expliquer le concept d'espace de coworking de type cantinue numérique — <span class="label label-info">Fait</span><br />
+                    <a href="https://docs.google.com/presentation/pub?id=15peXc0ncRXTufunyoPbmltZuJpnrMuVGJFmJyeCePUc&start=false&loop=false&delayms=3000">Voici le résultat…</a></li>
+                    <li>Mise en place d'un sondage pour estimer et avoir une liste de personnes intéressées — <span class="label label-info">Fait</span></li>
+                    <li>Faire la promotion du sondage dans la région messine <span class="label label-info">En cours</span></li>
+                    <li>Réalisation d'un support de présentation du projet (budget de fonctionnement, d'initialisation, besoins…) — <span class="label label-info">En cours</span></li>
+                    <li>Établir une liste de personnes à contacter — <span class="label label-info">En cours</span></li>
+                    <li>Rencontrer les personnes — <span class="label label-info">À faire</span></li>
+                    <li>…</li>
+                </ul>
 
-                        <p><a href="https://trello.com/board/coworking-metz/50d643c7e9a33da933004b5d">Cette Roadmap sur Trello…</a></p>
+                <p><a href="https://trello.com/board/coworking-metz/50d643c7e9a33da933004b5d">Cette Roadmap sur Trello…</a></p>
 
-                        <p>Je vais essayer de me baser sur la feuille de route du <a href="http://coworkinginitiatives.com/wiki/index.php/Coworking_How_To#Avant_de_d.C3.A9marrer">Coworking How to</a>.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="formulaire"><span id="sondage-pour-les-personnes-interessees"></span>
-                <div class="row">
-                    <div class="span12">
-                        <h2>Sondage pour les personnes intéressées<a href="#sondage-pour-les-personnes-interessees" class="deep-link"></a></h2>
+                <p>Je vais essayer de me baser sur la feuille de route du <a href="http://coworkinginitiatives.com/wiki/index.php/Coworking_How_To#Avant_de_d.C3.A9marrer">Coworking How to</a>.</p>
+            </div>
+        </div>
+    </section>
+    <section id="formulaire"><span id="sondage-pour-les-personnes-interessees"></span>
+        <div class="row">
+            <div class="span12">
+                <h2>Sondage pour les personnes intéressées<a href="#sondage-pour-les-personnes-interessees" class="deep-link"></a></h2>
 
-                        <p>Le but de ce formulaire est d'avoir une première idée du nombre de personnes intéressées 
-                        et de leurs envies.</p> 
+                <p>Le but de ce formulaire est d'avoir une première idée du nombre de personnes intéressées 
+                et de leurs envies.</p> 
 
-                        <form class="form-horizontal well" name="survey-form">
-                            <div class="control-group">
-                                <label class="control-label" for="prenom">Prénom</label>
-                                <div class="controls">
-                                    <input type="text" id="prenom" name="prenom">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="nom">Nom</label>
-                                <div class="controls">
-                                    <input type="text" id="nom" name="nom">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="mail">Adresse mail</label>
-                                <div class="controls">
-                                    <input type="text" id="mail" name="mail">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="twitter">Compte twitter</label>
-                                <div class="controls">
-                                    <input type="text" id="twitter" name="twitter" value="@">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="homepage">Home page</label>
-                                <div class="controls">
-                                    <input type="text" id="homepage" name="homepage">
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="ville">Ville</label>
-                                <div class="controls">
-                                    <input type="text" id="ville" name="ville">
-                                </div>
-                            </div>
-                            <hr style="width: 200px; margin: 20px auto; border-bottom: 1px solid #ccc;" />
-                            <div class="control-group">
-                                <label class="control-label" for="utilisation_coworking">Espace coworking</label>
-                                <div class="controls">
-                                    <select id="utilisation_coworking" name="taux_utilisation_coworking" class="input-xxlarge">
-                                        <option selected="selected" value="pas-interesse">Je ne suis pas intéressé par l'espace de coworking</option>
-                                        <option value="ponctuellement">Je suis intéressé pour venir ponctuellement l'espace coworking</option>
-                                        <option value="1-jour">Je suis intéressé pour utiliser environ 1 jour par semaine l'espace coworking</option>
-                                        <option value="2-jours">Je suis intéressé pour utiliser environ 2 jours par semaine l'espace coworking</option>
-                                        <option value="3-jours">Je suis intéressé pour utiliser environ 3 jours par semaine l'espace coworking</option>
-                                        <option value="4-jours">Je suis intéressé pour utiliser environ 4 jours par semaine l'espace coworking</option>
-                                        <option value="5-jours">Je suis intéressé pour utiliser environ 5 jours par semaine l'espace coworking</option>
-                                    </select>
-                                    <span class="help-block">Exemples de tarifs : 
-                                        <a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">la cantine de Rênnes</a>,
-                                        <a href="http://cantine.atlantic2.org/coworking-nantes/tarifs/">la cantine de Nantes</a>, 
-                                        <a href="http://coworking-nancy.fr/coworking/">À Nancy</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="type_besoin_coworking">Votre besoin dans l'espace coworking</label>
-                                <div class="controls">
-                                    <select id="type_besoin_coworking" name="type_besoin_coworking" class="input-xxlarge">
-                                        <option selected="selected" value="pas-interesse">Je ne suis pas intéressé par l'espace de coworking</option>
-                                        <option value="je-ne-sais-pas">Je ne sais pas</option>
-                                        <option value="emplacement-libre">Un emplacement libre en open space dans l'espace de coworking</option>
-                                        <option value="emplacement-fixe">Un emplacement fixe en open space dans l'espace de coworking</option>
-                                        <option value="espace-ferme">Un espace fermé (bureau) dans l'espace de coworking</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="checkbox">
-                                        <input 
-                                            type="checkbox"
-                                            name="interesse_pour_assister_a_des_ateliers_conferences_debats"
-                                            value="oui"> Je serais intéressé par ce lieu <strong>pour participer</strong> à des ateliers, conférences, débats…
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="checkbox">
-                                        <input 
-                                            type="checkbox" 
-                                            name="interesse_pour_organiser_animer_ateliers_conferences_debats"
-                                            value="oui"> Je serais intéressé par ce lieu <strong>pour organiser, animer</strong> un ou plusieurs ateliers, conférences, débats…
-                                    </label>
-                                </div>
-                            </div>
-                            <hr style="width: 200px; margin: 20px auto; border-bottom: 1px solid #ccc;" />
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="checkbox">
-                                        <input 
-                                            type="checkbox" 
-                                            name="autorise_publication_donnees_de_ce_formulaire"
-                                            value="oui"> J'autorise la publication des données de ce formulaire sur le site <a href="http://coworking.a-metz.info">coworking.a-metz.info</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <label class="checkbox">
-                                        <input 
-                                            type="checkbox" 
-                                            name="inscription_mailing_list"
-                                            value="oui"> Je souhaite être inscrit à la liste de diffusion <a href="https://groups.google.com/forum/?fromgroups#!forum/coworking-metz">« Coworking à Metz »</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <button type="submit" class="btn">Envoyer…</button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="alert alert-info" style="display: none">
-                            <button class="close" data-dismiss="alert" type="button">×</button>
-                            <p>Les données du formulaire ont bien été envoyé.</p>
-
-                            <p>Merci pour votre participation.</p>
+                <form class="form-horizontal well" name="survey-form">
+                    <div class="control-group">
+                        <label class="control-label" for="prenom">Prénom</label>
+                        <div class="controls">
+                            <input type="text" id="prenom" name="prenom">
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label class="control-label" for="nom">Nom</label>
+                        <div class="controls">
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="mail">Adresse mail</label>
+                        <div class="controls">
+                            <input type="text" id="mail" name="mail">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="twitter">Compte twitter</label>
+                        <div class="controls">
+                            <input type="text" id="twitter" name="twitter" value="@">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="homepage">Home page</label>
+                        <div class="controls">
+                            <input type="text" id="homepage" name="homepage">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="ville">Ville</label>
+                        <div class="controls">
+                            <input type="text" id="ville" name="ville">
+                        </div>
+                    </div>
+                    <hr style="width: 200px; margin: 20px auto; border-bottom: 1px solid #ccc;" />
+                    <div class="control-group">
+                        <label class="control-label" for="utilisation_coworking">Espace coworking</label>
+                        <div class="controls">
+                            <select id="utilisation_coworking" name="taux_utilisation_coworking" class="input-xxlarge">
+                                <option selected="selected" value="pas-interesse">Je ne suis pas intéressé par l'espace de coworking</option>
+                                <option value="ponctuellement">Je suis intéressé pour venir ponctuellement l'espace coworking</option>
+                                <option value="1-jour">Je suis intéressé pour utiliser environ 1 jour par semaine l'espace coworking</option>
+                                <option value="2-jours">Je suis intéressé pour utiliser environ 2 jours par semaine l'espace coworking</option>
+                                <option value="3-jours">Je suis intéressé pour utiliser environ 3 jours par semaine l'espace coworking</option>
+                                <option value="4-jours">Je suis intéressé pour utiliser environ 4 jours par semaine l'espace coworking</option>
+                                <option value="5-jours">Je suis intéressé pour utiliser environ 5 jours par semaine l'espace coworking</option>
+                            </select>
+                            <span class="help-block">Exemples de tarifs : 
+                                <a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">la cantine de Rênnes</a>,
+                                <a href="http://cantine.atlantic2.org/coworking-nantes/tarifs/">la cantine de Nantes</a>, 
+                                <a href="http://coworking-nancy.fr/coworking/">À Nancy</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="type_besoin_coworking">Votre besoin dans l'espace coworking</label>
+                        <div class="controls">
+                            <select id="type_besoin_coworking" name="type_besoin_coworking" class="input-xxlarge">
+                                <option selected="selected" value="pas-interesse">Je ne suis pas intéressé par l'espace de coworking</option>
+                                <option value="je-ne-sais-pas">Je ne sais pas</option>
+                                <option value="emplacement-libre">Un emplacement libre en open space dans l'espace de coworking</option>
+                                <option value="emplacement-fixe">Un emplacement fixe en open space dans l'espace de coworking</option>
+                                <option value="espace-ferme">Un espace fermé (bureau) dans l'espace de coworking</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input 
+                                    type="checkbox"
+                                    name="interesse_pour_assister_a_des_ateliers_conferences_debats"
+                                    value="oui"> Je serais intéressé par ce lieu <strong>pour participer</strong> à des ateliers, conférences, débats…
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input 
+                                    type="checkbox" 
+                                    name="interesse_pour_organiser_animer_ateliers_conferences_debats"
+                                    value="oui"> Je serais intéressé par ce lieu <strong>pour organiser, animer</strong> un ou plusieurs ateliers, conférences, débats…
+                            </label>
+                        </div>
+                    </div>
+                    <hr style="width: 200px; margin: 20px auto; border-bottom: 1px solid #ccc;" />
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input 
+                                    type="checkbox" 
+                                    name="autorise_publication_donnees_de_ce_formulaire"
+                                    value="oui"> J'autorise la publication des données de ce formulaire sur le site <a href="http://coworking.a-metz.info">coworking.a-metz.info</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input 
+                                    type="checkbox" 
+                                    name="inscription_mailing_list"
+                                    value="oui"> Je souhaite être inscrit à la liste de diffusion <a href="https://groups.google.com/forum/?fromgroups#!forum/coworking-metz">« Coworking à Metz »</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="btn">Envoyer…</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="alert alert-info" style="display: none">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <p>Les données du formulaire ont bien été envoyé.</p>
+
+                    <p>Merci pour votre participation.</p>
                 </div>
-            </section>
-            <section id="liste-de-personnes-interessees">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Liste de personnes intéressées<a href="#liste-de-personnes-interessees" class="deep-link"></a></h2>
-
-                        <p>Liste de personnes intéressées par cet espace de coworking, lieu de rencontre…</p>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2">
-                                    </th>
-                                    <th rowspan="2">
-                                        Intérêt pour l'espace de coworking
-                                    </th>
-                                    <th colspan="2">
-                                        Événements, ateliers
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        Assister
-                                    </th>
-                                    <th>
-                                        Organiser, animer…
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td class="center"><a href="mailto:contact@stephane-klein.info">Stéphane Klein</a></td>
-                                <td>1 jour par semaine de coworking en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:contact@vincent-garrett.info">Vincent Garrett</a> (<a href="https://twitter.com/meldianen">Twitter</a>)</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:olivier@k3z.fr">Olivier Kautz</a> (<a href="https://twitter.com/olivier_k">Twitter</a>, <a href="http://www.k3z.fr">homepage</a>)</td>
-                                <td>ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:sebastien@persegol.com">Sébastien Persegol</a> (<a href="http://7h47.com">homepage</a>)</td>
-                                <td>2 jours par semaine en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme NL</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:yves+lug@yvesago.net">Yves Agostini</a> (<a href="http://lab.yvesago.net">homepage</a>)</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:ftaton@gmail.com">Frank Taton</a> (<a href="https://twitter.com/frank_taton">Twitter</a>)</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme XB</a></td>
-                                <td>2 jours par semaine en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme VJ</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:verodoussot@gmai.com">Véronique Doussot</a> (<a href="https://twitter.com/bellskinner">Twitter</a>, <a href="http://www.scoop.it/t/troisiemelieu">homepage</a>)</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme ST</a></td>
-                                <td>5 jours par semaine en emplacement fixe ou bureau fermé</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:david.vantyghem@free.fr">David Vantyghem</a></td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:webmaster@washaweb.com">Jérôme Poslednik</a> (<a href="https://twitter.com/washaweb">Twitter</a>, <a href="http://www.washaweb.com">homepage</a>)</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:amandinina@hotmail.com">Amandine</a></td>
-                                <td>2 jours par semaine en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:oba@proxiti.com">Olivier Bauchat</a> (<a href="https://twitter.com/proxiti">Twitter</a>, <a href="http://www.proxiti.info/">homepage</a>)</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme LB</td>
-                                <td>2 jours par semaine en emplacement fermé</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme PS</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme PJ</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:v_respaut@yahoo.fr">Valérie Respaut</a> (<a href="https://twitter.com/isVal">Twitter</a>)</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:manoncarre421@gmail.com">Manon Carre</a></td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:joel.schwartz@voila.fr">Joel Schwartz</a></td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme NH</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme GJ</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:lhermitte_stp@yahoo.fr">Stéphane Lhermitte</a></td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:dorotheeberezneff@gmail.com">Dorothée Berezneff</a></td>
-                                <td>5 jours par semaine espace fermé</td>
-                                <td class="center"></td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme TS</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:contact@cedricschoenecker.com">Cédric Schoenecker</a> (<a href="https://twitter.com/CedSchoenecker">Twitter</a>, <a href="http://www.cedricschoenecker.com/">homepage</a>)</td>
-                                <td>2 jours par semaine emplacement fixe</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme LC</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:contact@defiwebdesign.com">Bruno Benedetti</a> (<a href="http://www.defiwebdesign.com/">homepage</a>)</td>
-                                <td>Ponctuellement</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme DW</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:ceubri@gmail.com">Brice Martin</a> (<a href="https://twitter.com/ceubri">Twitter</a>, <a href="http://www.ceubri.com/">homepage</a>)</td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:contact@noelie-deschamps.info">Noëlie Deschamps</a> (<a href="https://twitter.com/Noelie92">Twitter</a>)</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:maggy.koziel@gmail.com">Maggy Koziel</a></td>
-                                <td>1 jour par semaine en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme PS</a></td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:isabelle.fettu@gmail.com">Isabelle Fettu</a></td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:xavier.hen@pluginit.fr">Xavier Hen</a> (<a href="https://twitter.com/Uminily">Twitter</a>, <a href="http://www.pluginit.fr/">homepage</a>)</td>
-                                <td>3 jours par semaine de coworking en emplacement fixe</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme FB</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center"></td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:nsanitas@gmail.com">Nicolas Sanitas</a> (<a href="https://twitter.com/nsanitas">Twitter</a>)</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:dimitri@parazhit.fr">Dimitri Boch</a> (<a href="https://twitter.com/DimitriBoch">Twitter</a>, <a href="http://www.parazhit.fr/">homepage</a>)</td>
-                                <td>3 jours par semaine, espace fermé</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:alex.maagac@free.fr">Alexandre Mercier</a> (<a href="https://twitter.com/djraylex">Twitter</a>)</td>
-                                <td>2 jours par semaine en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:saol.freelance@gmail.com">David Gos</a> (<a href="https://twitter.com/davgos57">Twitter</a>, <a href="http://davidgos.fr/">homepage</a>)</td>
-                                <td>5 jours par semaine en emplacement fixe</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center"><a href="mailto:dominique.choisel@gmail.com">Dominique Choisel</a> (<a href="https://twitter.com/dchoisel">Twitter</a>, <a href="http://choisel.biz/">homepage</a>)</td>
-                                <td>Ponctuellement en emplacement libre</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <!--
-                            <tr>
-                                <td class="center"><a href="mailto:"></a> (<a href="https://twitter.com/">Twitter</a>, <a href="">homepage</a>)</td>
-                                <td></td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr>
-                                <td class="center">Anonyme </td>
-                                <td>-</td>
-                                <td class="center">X</td>
-                                <td class="center">X</td>
-                            </tr>
-                            -->
-                        </table>
-
-                        <p>Vous pouvez être ajouté à cette liste en renseignant le <a href="#formulaire">formulaire ci-dessus</a>.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="bilan-des-personnes-interessees">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Bilan des personnes intéressées<a href="#bilan-des-personnes-interessees" class="deep-link"></a></h2>
-                    </div><!-- span12 -->
-                    <div class="span12">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2">Utilisation par semaine</th>
-                                    <th colspan="3">Type d'emplacement</th>
-                                    <th rowspan="2">Entrées d'argent par mois</th>
-                                </tr>
-                                <tr>
-                                    <th>Libre</th>
-                                    <th>Fixe</th>
-                                    <th>Fermé</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Ponctuellement</td>
-                                    <td class="center">30</td>
-                                    <td class="center">-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">
-                                        On va dire, ponctuellement = 1 jour / mois<br />
-                                        8 € x 30 = 240 €
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1 jour</td>
-                                    <td class="center">2</td>
-                                    <td class="center">-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">
-                                        25 € x 2 = 50 €
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2 jours</td>
-                                    <td class="center">6</td>
-                                    <td class="center">-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">
-                                        50 € x 6 = 300 €
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3 jours</td>
-                                    <td class="center">3</td>
-                                    <td class="center">-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">
-                                        75 € x 3 = 225 €
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4 jours</td>
-                                    <td class="center">-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">-</td>
-                                    <td class="center"></td>
-                                </tr>
-                                <tr>
-                                    <td>5 jours</td>
-                                    <td class="center">-</td>
-                                    <td class="center">1</td>
-                                    <td class="center">2</td>
-                                    <td class="center">
-                                        120 € x 1 = 120 €<br />
-                                        250 € x 2 = 500 €
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" style="text-align: right; font-weight: bold;">
-                                        Total :
-                                    </td>
-                                    <td class="center">1450 € / mois</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <p>Avec un tarif déterminé arbitrairement, la version optimiste des entrées d'argent est de 1450 € / mois.</p>
-
-                        <p>Je sais que toutes les réponses ne sont pas sérieuses.<br />
-                        Si je pars sur le principe qu'une réponse sur deux est sérieuse… j'arrive sur un montant de 700 € / mois.</p>
-
-                        <p>Par conséquent, pour le moment, ces ressources financières ne permettent pas de financer l'espace
-                        de coworking.</p>
-                    </div><!-- span12 -->
-                <div><!-- row -->
-            </section>
-            <section id="complement-information-espace-coworking">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Complément d'information : Espace Coworking<a href="#complement-information-espace-coworking" class="deep-link"></a></h2>
-                    </div><!-- span12 -->
-                    <div class="span8">
-                        <h3>Pour quel public ?</h3>
-
-                        <ul>
-                            <li>indépendants,</li>
-                            <li>free-lance,</li>
-                            <li>auto-entrepreneurs,</li>
-                            <li>salariés,</li>
-                            <li>télétravailleurs, </li>
-                            <li>travailleurs nomades…</li>
-                        </ul>
-                    </div>
-                    <div class="span4">
-                        <iframe height="225" frameborder="0" width="300" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/21645364?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0"></iframe>
-                    </div>
-                    <div class="span12">
-                        <h3>Pour quel usage ?</h3>
-
-                        <ul>
-                            <li>Disposer d'un réel espace de travail de façon ponctuelle ou régulière à moindre coût</li>
-                            <li>Réseautage (HUB) : faire des échanges, partager des expériences (tisser des liens avec d'autres professionnels)</li>
-                            <li>Casser la solitude du travailleur indépendant</li>
-                            <li>Rester autonome sans être isolé</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section id="complement-information-espace-de-rencontre">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Complément d'information : Espace de Rencontre<a href="#complement-information-espace-de-rencontre" class="deep-link"></a></h2>
-                    </div><!-- span12 -->
-                    <div class="span12">
-                        <h3>Pour quel public ?</h3>
-
-                        <ul>
-                            <li>tout type de public sans aucune discrimination</li>
-                        </ul>
-                    </div>
-                    <div class="span12">
-                        <h3>Pour quel usage ?</h3>
-
-                        <ul>
-                            <li>un lieu ouvert, de débats, d'échanges</li>
-                            <li>qui permet de partager des savoirs</li>
-                            <li>présenter des idées</li>
-                            <li>des projets…</li>
-                        </ul>
-                    </div><!-- span12 -->
-                    <div class="span12">
-                        <h3>Thématiques souvent rencontrées</h3>
-
-                        <ul>
-                            <li>Technique (programmation, outils informatiques)</li>
-                            <li>Électronique ( → fablab…)</li>
-                            <li>Écologie</li>
-                            <li>Management</li>
-                            <li>Gestion d'entreprise</li>
-                            <li>Politique</li>
-                            <li>OpenData</li>
-                            <li>Économie sociale & solidaire</li>
-                            <li>…</li>
-                        </ul>
-
-                        <p><a href="http://lacantine.org/events">Exemples d'événements à la Cantine de Paris…</a></p>
-                    </div><!-- span12 -->
-
-                </div><!-- row -->
-            </section>
-            <section id="supports-de-communication">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Supports de communication<a href="#supports-de-communication" class="deep-link"></a></h2>
-
-                        <p>Vous pouvez téléchargez des affiches au format PDF, les imprimer et les diffuser autour de vous (format A4) :</p>
-                    </div>
-                    <div class="span6">
-                        <a href="download/affiche-sondage-coworking.pdf"
-                            ><img 
-                                src="img/affiche-sondage-coworking.png"
-                                class="affiche"
-                                />
-                        </a>
-                    </div>
-                    <div class="span6">
-                        <a href="download/affiche-sondage-hackerspace.pdf">
-                            <img 
-                                src="img/affiche-sondage-hackerspace.png"
-                                class="affiche"
-                                />
-                        </a>
-                    </div>
-                    <div class="span12">
-                        <p>Support de communication au format carte de visite (85x55 mm) :</p>
-                    </div>
-                    <div class="span6">
-                        <a href="download/carte_com_cowork_metz_recto.pdf"
-                            ><img 
-                                src="img/carte_com_cowork_metz_recto.png"
-                                class="affiche"
-                                />
-                        </a>
-                    </div>
-                    <div class="span6">
-                        <a href="download/carte_com_cowork_metz_verso.pdf">
-                            <img 
-                                src="img/carte_com_cowork_metz_verso.png"
-                                class="affiche"
-                                />
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section id="faq">
-                <div class="row">
-                    <div class="span12">
-                        <h2>FAQ - Questions fréquemment posées<a href="#faq" class="deep-link"></a></h2>
-
-                        <h3 id="q1">J'ai bien compris que c'est un projet… mais alors il est où le business plan ?</h3>
-
-                            <p>Notre démarche est tout d'abord de constituer une communauté…<br />
-                            Avoir une estimation des besoins d'une ville comme Metz… Est-ce qu'il y a une masse
-                            critique pour ouvrir ce genre d'espace… Le but n'est pas de dépenser de l'argent public ou
-                            autre et d'avoir un lieu vide.</p>
-
-                            <p>Deuxièmement, les espaces de coworking sont généralement portés par leurs membres,
-                            ce sont les coworkeurs qui adaptent, modifient… l'espace en fonction de leurs goûts, de leurs
-                            besoins.</p>
-
-                            <p>Par contre, au niveau des besoins financiers et de fonctionnement, on peut partir sur les
-                            éléments suivants (chiffres approximatifs) :</p>
-
-                            <ul>
-                                <li>Un budget initial de 1000 €</li>
-                                <li>Un loyer de 1500 € / mois</li>
-                                <li>Un budget de fonctionnement de 500 € / mois</li>
-                            </ul>
-
-
-                        <h3 id="q2">Est-ce que ce lieu est limité aux travailleurs du web ?</h3>
-
-                            <p>La réponse est non, un journaliste, un architecte, un géographe peut parfaitement trouver
-                            sa place dans un espace de coworking.<br />
-                            Cependant, l'expérience de terrain des autres espaces de coworking montre que la plupart du temps 
-                            ce sont des travailleurs du web qui utilisent ce genre d'espace.</p>
-
-
-                        <h3 id="q3">Ça ouvre quand ?</h3>
-
-                            <p>Pour le moment il faut atteindre une masse critique de coworkeurs permanents
-                            ou semi permanents pour financer le loyer des locaux (
-                            <a href="#bilan-des-personnes-interessees">voir bilan des personnes intéressées</a>).<br />
-                            D'après l'expérience d'autres espaces de coworking, il est possible de 
-                            placer le seuil de démarrage à 6 coworkeurs à plein temps.</p>
-
-
-                        <h3 id="q4">Quelle surface ?</h3>
-
-                            <p>Tout dépend du nombre de coworkeurs :) D'après une étude réalisée sur les espaces de coworking
-                            en France, la tendance est à 200 m² de moyenne.<br/>
-                            À noter que la plupart des projets démarrent avec de plus petites surfaces.</p>
-
-
-                        <h3 id="q5">Quel est le lien entre le projet d'espace de Coworking et le GOALL</h3>
-
-                            <p>Le <a href="http://www.goall.fr/">GOALL</a> (Groupe d'organismes acteurs du Libre en Lorraine) 
-                            est une association amie. Nous connaissons les membres du GOALL, nous les avons rencontré
-                            et nous avons parlé du projet. Ils essaient autant que possible de nous aider dans ce projet.</p>
-
-                            <p>Le projet d'espace de Coworking n'a pas de lien direct avec le monde Libre, même
-                            si bien entendu énormément de développeurs libristes ou de communautés libres
-                            utilisent des espaces de coworking.</p>
-
-
-                        <h3 id="q6">Quels seront les tarifs ?</h3>
-
-                            <p>Nous n'avons pas défini de tarifs, mais voici des exemples de tarifs d'autres
-                            espaces de coworking :</p>
-
-                            <ul>
-                                <li><a href="http://www.poudriere.org/#rejoindre">À la poudrière de Nancy</a></li>
-                                <ul>
-                                    <li>1/2 journée 7 €</li>
-                                    <li>La journée 10 €</li>
-                                    <li>Résident 5j/semaine 190 €/mois</li>
-                                </ul>
-                                <li><a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">Le coworking à la Cantine Numérique Rennaise</a></li>
-                                <ul>
-                                    <li>La journée 10 €</li>
-                                    <li>Résident 3j/semaine : 85 €/mois</li>
-                                    <li>Résident 5j/semaine : 120 €/mois</li>
-                                </ul>
-                            </ul>
-
-                            <h3 id="q7">Quelles différences avec un télécentre (exemple Regus)</h3>
-
-                                <p>Un <a href="http://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9centre">Télécentre</a> (exemple <a href="http://fr.wikipedia.org/wiki/Regus">Regus</a>)
-                                est une société qui propose à ses clients des bureaux entièrement équipés, 
-                                des bureaux virtuels et des salles de réunions.</p>
-
-                                <p>Contrairement à un télécentre, un espace de Coworking est plus orienté 
-                                communauté… le but est de favoriser les échanges entre les coworkeurs.</p>
-
-                                <p>Un espace de coworking sera beaucoup moins cher (avec
-                                des services moindres) que les solutions proposées par un télécentre.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="liens-externes">
-                <div class="row">
-                    <div class="span12">
-                        <h2>Liens externes<a href="#liens-externes" class="deep-link"></a></h2>
-
-                        <ul>
-                            <li><a href="https://docs.google.com/presentation/pub?id=15peXc0ncRXTufunyoPbmltZuJpnrMuVGJFmJyeCePUc&start=false&loop=false&delayms=3000"
-                                >Présentation du concept de Cantine Numérique</a></li>
-                            <li><a href="http://coworkinginitiatives.com/au-dela/">Page « En savoir plus sur le coworking » du site Coworking Initiatives</a></li>
-                            <li><a href="http://coworkinginitiatives.com/wiki/index.php/Coworking_How_To">Coworking How To</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div><!-- container -->
-        <footer class="footer" id="footer">
-            <div class="container">
-                <a href="http://coworking.a-metz.info">Espace coworking Metz</a> — <a href="contact@stephane-klein.info">contact@stephane-klein.info</a> — <a href="https://github.com/harobed/coworking.a-metz.info">code source</a>
             </div>
-        </footer>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/waypoints.min.js"></script>
+        </div>
+    </section>
+    <section id="liste-de-personnes-interessees">
+        <div class="row">
+            <div class="span12">
+                <h2>Liste de personnes intéressées<a href="#liste-de-personnes-interessees" class="deep-link"></a></h2>
+
+                <p>Liste de personnes intéressées par cet espace de coworking, lieu de rencontre…</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">
+                            </th>
+                            <th rowspan="2">
+                                Intérêt pour l'espace de coworking
+                            </th>
+                            <th colspan="2">
+                                Événements, ateliers
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Assister
+                            </th>
+                            <th>
+                                Organiser, animer…
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td class="center"><a href="mailto:contact@stephane-klein.info">Stéphane Klein</a></td>
+                        <td>1 jour par semaine de coworking en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:contact@vincent-garrett.info">Vincent Garrett</a> (<a href="https://twitter.com/meldianen">Twitter</a>)</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:olivier@k3z.fr">Olivier Kautz</a> (<a href="https://twitter.com/olivier_k">Twitter</a>, <a href="http://www.k3z.fr">homepage</a>)</td>
+                        <td>ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:sebastien@persegol.com">Sébastien Persegol</a> (<a href="http://7h47.com">homepage</a>)</td>
+                        <td>2 jours par semaine en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme NL</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:yves+lug@yvesago.net">Yves Agostini</a> (<a href="http://lab.yvesago.net">homepage</a>)</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:ftaton@gmail.com">Frank Taton</a> (<a href="https://twitter.com/frank_taton">Twitter</a>)</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme XB</a></td>
+                        <td>2 jours par semaine en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme VJ</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:verodoussot@gmai.com">Véronique Doussot</a> (<a href="https://twitter.com/bellskinner">Twitter</a>, <a href="http://www.scoop.it/t/troisiemelieu">homepage</a>)</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme ST</a></td>
+                        <td>5 jours par semaine en emplacement fixe ou bureau fermé</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:david.vantyghem@free.fr">David Vantyghem</a></td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:webmaster@washaweb.com">Jérôme Poslednik</a> (<a href="https://twitter.com/washaweb">Twitter</a>, <a href="http://www.washaweb.com">homepage</a>)</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:amandinina@hotmail.com">Amandine</a></td>
+                        <td>2 jours par semaine en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:oba@proxiti.com">Olivier Bauchat</a> (<a href="https://twitter.com/proxiti">Twitter</a>, <a href="http://www.proxiti.info/">homepage</a>)</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme LB</td>
+                        <td>2 jours par semaine en emplacement fermé</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme PS</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme PJ</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:v_respaut@yahoo.fr">Valérie Respaut</a> (<a href="https://twitter.com/isVal">Twitter</a>)</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:manoncarre421@gmail.com">Manon Carre</a></td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:joel.schwartz@voila.fr">Joel Schwartz</a></td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme NH</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme GJ</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:lhermitte_stp@yahoo.fr">Stéphane Lhermitte</a></td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:dorotheeberezneff@gmail.com">Dorothée Berezneff</a></td>
+                        <td>5 jours par semaine espace fermé</td>
+                        <td class="center"></td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme TS</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:contact@cedricschoenecker.com">Cédric Schoenecker</a> (<a href="https://twitter.com/CedSchoenecker">Twitter</a>, <a href="http://www.cedricschoenecker.com/">homepage</a>)</td>
+                        <td>2 jours par semaine emplacement fixe</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme LC</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:contact@defiwebdesign.com">Bruno Benedetti</a> (<a href="http://www.defiwebdesign.com/">homepage</a>)</td>
+                        <td>Ponctuellement</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme DW</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:ceubri@gmail.com">Brice Martin</a> (<a href="https://twitter.com/ceubri">Twitter</a>, <a href="http://www.ceubri.com/">homepage</a>)</td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:contact@noelie-deschamps.info">Noëlie Deschamps</a> (<a href="https://twitter.com/Noelie92">Twitter</a>)</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:maggy.koziel@gmail.com">Maggy Koziel</a></td>
+                        <td>1 jour par semaine en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme PS</a></td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:isabelle.fettu@gmail.com">Isabelle Fettu</a></td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:xavier.hen@pluginit.fr">Xavier Hen</a> (<a href="https://twitter.com/Uminily">Twitter</a>, <a href="http://www.pluginit.fr/">homepage</a>)</td>
+                        <td>3 jours par semaine de coworking en emplacement fixe</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme FB</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:nsanitas@gmail.com">Nicolas Sanitas</a> (<a href="https://twitter.com/nsanitas">Twitter</a>)</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:dimitri@parazhit.fr">Dimitri Boch</a> (<a href="https://twitter.com/DimitriBoch">Twitter</a>, <a href="http://www.parazhit.fr/">homepage</a>)</td>
+                        <td>3 jours par semaine, espace fermé</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:alex.maagac@free.fr">Alexandre Mercier</a> (<a href="https://twitter.com/djraylex">Twitter</a>)</td>
+                        <td>2 jours par semaine en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:saol.freelance@gmail.com">David Gos</a> (<a href="https://twitter.com/davgos57">Twitter</a>, <a href="http://davidgos.fr/">homepage</a>)</td>
+                        <td>5 jours par semaine en emplacement fixe</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><a href="mailto:dominique.choisel@gmail.com">Dominique Choisel</a> (<a href="https://twitter.com/dchoisel">Twitter</a>, <a href="http://choisel.biz/">homepage</a>)</td>
+                        <td>Ponctuellement en emplacement libre</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td class="center"><a href="mailto:"></a> (<a href="https://twitter.com/">Twitter</a>, <a href="">homepage</a>)</td>
+                        <td></td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    <tr>
+                        <td class="center">Anonyme </td>
+                        <td>-</td>
+                        <td class="center">X</td>
+                        <td class="center">X</td>
+                    </tr>
+                    -->
+                </table>
+
+                <p>Vous pouvez être ajouté à cette liste en renseignant le <a href="#formulaire">formulaire ci-dessus</a>.</p>
+            </div>
+        </div>
+    </section>
+    <section id="bilan-des-personnes-interessees">
+        <div class="row">
+            <div class="span12">
+                <h2>Bilan des personnes intéressées<a href="#bilan-des-personnes-interessees" class="deep-link"></a></h2>
+            </div><!-- span12 -->
+            <div class="span12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Utilisation par semaine</th>
+                            <th colspan="3">Type d'emplacement</th>
+                            <th rowspan="2">Entrées d'argent par mois</th>
+                        </tr>
+                        <tr>
+                            <th>Libre</th>
+                            <th>Fixe</th>
+                            <th>Fermé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ponctuellement</td>
+                            <td class="center">30</td>
+                            <td class="center">-</td>
+                            <td class="center">-</td>
+                            <td class="center">
+                                On va dire, ponctuellement = 1 jour / mois<br />
+                                8 € x 30 = 240 €
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1 jour</td>
+                            <td class="center">2</td>
+                            <td class="center">-</td>
+                            <td class="center">-</td>
+                            <td class="center">
+                                25 € x 2 = 50 €
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2 jours</td>
+                            <td class="center">6</td>
+                            <td class="center">-</td>
+                            <td class="center">-</td>
+                            <td class="center">
+                                50 € x 6 = 300 €
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3 jours</td>
+                            <td class="center">3</td>
+                            <td class="center">-</td>
+                            <td class="center">-</td>
+                            <td class="center">
+                                75 € x 3 = 225 €
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4 jours</td>
+                            <td class="center">-</td>
+                            <td class="center">-</td>
+                            <td class="center">-</td>
+                            <td class="center"></td>
+                        </tr>
+                        <tr>
+                            <td>5 jours</td>
+                            <td class="center">-</td>
+                            <td class="center">1</td>
+                            <td class="center">2</td>
+                            <td class="center">
+                                120 € x 1 = 120 €<br />
+                                250 € x 2 = 500 €
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: right; font-weight: bold;">
+                                Total :
+                            </td>
+                            <td class="center">1450 € / mois</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Avec un tarif déterminé arbitrairement, la version optimiste des entrées d'argent est de 1450 € / mois.</p>
+
+                <p>Je sais que toutes les réponses ne sont pas sérieuses.<br />
+                Si je pars sur le principe qu'une réponse sur deux est sérieuse… j'arrive sur un montant de 700 € / mois.</p>
+
+                <p>Par conséquent, pour le moment, ces ressources financières ne permettent pas de financer l'espace
+                de coworking.</p>
+            </div><!-- span12 -->
+        <div><!-- row -->
+    </section>
+    <section id="complement-information-espace-coworking">
+        <div class="row">
+            <div class="span12">
+                <h2>Complément d'information : Espace Coworking<a href="#complement-information-espace-coworking" class="deep-link"></a></h2>
+            </div><!-- span12 -->
+            <div class="span8">
+                <h3>Pour quel public ?</h3>
+
+                <ul>
+                    <li>indépendants,</li>
+                    <li>free-lance,</li>
+                    <li>auto-entrepreneurs,</li>
+                    <li>salariés,</li>
+                    <li>télétravailleurs, </li>
+                    <li>travailleurs nomades…</li>
+                </ul>
+            </div>
+            <div class="span4">
+                <iframe height="225" frameborder="0" width="300" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/21645364?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0"></iframe>
+            </div>
+            <div class="span12">
+                <h3>Pour quel usage ?</h3>
+
+                <ul>
+                    <li>Disposer d'un réel espace de travail de façon ponctuelle ou régulière à moindre coût</li>
+                    <li>Réseautage (HUB) : faire des échanges, partager des expériences (tisser des liens avec d'autres professionnels)</li>
+                    <li>Casser la solitude du travailleur indépendant</li>
+                    <li>Rester autonome sans être isolé</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="complement-information-espace-de-rencontre">
+        <div class="row">
+            <div class="span12">
+                <h2>Complément d'information : Espace de Rencontre<a href="#complement-information-espace-de-rencontre" class="deep-link"></a></h2>
+            </div><!-- span12 -->
+            <div class="span12">
+                <h3>Pour quel public ?</h3>
+
+                <ul>
+                    <li>tout type de public sans aucune discrimination</li>
+                </ul>
+            </div>
+            <div class="span12">
+                <h3>Pour quel usage ?</h3>
+
+                <ul>
+                    <li>un lieu ouvert, de débats, d'échanges</li>
+                    <li>qui permet de partager des savoirs</li>
+                    <li>présenter des idées</li>
+                    <li>des projets…</li>
+                </ul>
+            </div><!-- span12 -->
+            <div class="span12">
+                <h3>Thématiques souvent rencontrées</h3>
+
+                <ul>
+                    <li>Technique (programmation, outils informatiques)</li>
+                    <li>Électronique ( → fablab…)</li>
+                    <li>Écologie</li>
+                    <li>Management</li>
+                    <li>Gestion d'entreprise</li>
+                    <li>Politique</li>
+                    <li>OpenData</li>
+                    <li>Économie sociale & solidaire</li>
+                    <li>…</li>
+                </ul>
+
+                <p><a href="http://lacantine.org/events">Exemples d'événements à la Cantine de Paris…</a></p>
+            </div><!-- span12 -->
+
+        </div><!-- row -->
+    </section>
+    <section id="supports-de-communication">
+        <div class="row">
+            <div class="span12">
+                <h2>Supports de communication<a href="#supports-de-communication" class="deep-link"></a></h2>
+
+                <p>Vous pouvez téléchargez des affiches au format PDF, les imprimer et les diffuser autour de vous (format A4) :</p>
+            </div>
+            <div class="span6">
+                <a href="download/affiche-sondage-coworking.pdf"
+                    ><img 
+                        src="img/affiche-sondage-coworking.png"
+                        class="affiche"
+                        />
+                </a>
+            </div>
+            <div class="span6">
+                <a href="download/affiche-sondage-hackerspace.pdf">
+                    <img 
+                        src="img/affiche-sondage-hackerspace.png"
+                        class="affiche"
+                        />
+                </a>
+            </div>
+            <div class="span12">
+                <p>Support de communication au format carte de visite (85x55 mm) :</p>
+            </div>
+            <div class="span6">
+                <a href="download/carte_com_cowork_metz_recto.pdf"
+                    ><img 
+                        src="img/carte_com_cowork_metz_recto.png"
+                        class="affiche"
+                        />
+                </a>
+            </div>
+            <div class="span6">
+                <a href="download/carte_com_cowork_metz_verso.pdf">
+                    <img 
+                        src="img/carte_com_cowork_metz_verso.png"
+                        class="affiche"
+                        />
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="row">
+            <div class="span12">
+                <h2>FAQ - Questions fréquemment posées<a href="#faq" class="deep-link"></a></h2>
+
+                <h3 id="q1">J'ai bien compris que c'est un projet… mais alors il est où le business plan ?</h3>
+
+                    <p>Notre démarche est tout d'abord de constituer une communauté…<br />
+                    Avoir une estimation des besoins d'une ville comme Metz… Est-ce qu'il y a une masse
+                    critique pour ouvrir ce genre d'espace… Le but n'est pas de dépenser de l'argent public ou
+                    autre et d'avoir un lieu vide.</p>
+
+                    <p>Deuxièmement, les espaces de coworking sont généralement portés par leurs membres,
+                    ce sont les coworkeurs qui adaptent, modifient… l'espace en fonction de leurs goûts, de leurs
+                    besoins.</p>
+
+                    <p>Par contre, au niveau des besoins financiers et de fonctionnement, on peut partir sur les
+                    éléments suivants (chiffres approximatifs) :</p>
+
+                    <ul>
+                        <li>Un budget initial de 1000 €</li>
+                        <li>Un loyer de 1500 € / mois</li>
+                        <li>Un budget de fonctionnement de 500 € / mois</li>
+                    </ul>
+
+
+                <h3 id="q2">Est-ce que ce lieu est limité aux travailleurs du web ?</h3>
+
+                    <p>La réponse est non, un journaliste, un architecte, un géographe peut parfaitement trouver
+                    sa place dans un espace de coworking.<br />
+                    Cependant, l'expérience de terrain des autres espaces de coworking montre que la plupart du temps 
+                    ce sont des travailleurs du web qui utilisent ce genre d'espace.</p>
+
+
+                <h3 id="q3">Ça ouvre quand ?</h3>
+
+                    <p>Pour le moment il faut atteindre une masse critique de coworkeurs permanents
+                    ou semi permanents pour financer le loyer des locaux (
+                    <a href="#bilan-des-personnes-interessees">voir bilan des personnes intéressées</a>).<br />
+                    D'après l'expérience d'autres espaces de coworking, il est possible de 
+                    placer le seuil de démarrage à 6 coworkeurs à plein temps.</p>
+
+
+                <h3 id="q4">Quelle surface ?</h3>
+
+                    <p>Tout dépend du nombre de coworkeurs :) D'après une étude réalisée sur les espaces de coworking
+                    en France, la tendance est à 200 m² de moyenne.<br/>
+                    À noter que la plupart des projets démarrent avec de plus petites surfaces.</p>
+
+
+                <h3 id="q5">Quel est le lien entre le projet d'espace de Coworking et le GOALL</h3>
+
+                    <p>Le <a href="http://www.goall.fr/">GOALL</a> (Groupe d'organismes acteurs du Libre en Lorraine) 
+                    est une association amie. Nous connaissons les membres du GOALL, nous les avons rencontré
+                    et nous avons parlé du projet. Ils essaient autant que possible de nous aider dans ce projet.</p>
+
+                    <p>Le projet d'espace de Coworking n'a pas de lien direct avec le monde Libre, même
+                    si bien entendu énormément de développeurs libristes ou de communautés libres
+                    utilisent des espaces de coworking.</p>
+
+
+                <h3 id="q6">Quels seront les tarifs ?</h3>
+
+                    <p>Nous n'avons pas défini de tarifs, mais voici des exemples de tarifs d'autres
+                    espaces de coworking :</p>
+
+                    <ul>
+                        <li><a href="http://www.poudriere.org/#rejoindre">À la poudrière de Nancy</a></li>
+                        <ul>
+                            <li>1/2 journée 7 €</li>
+                            <li>La journée 10 €</li>
+                            <li>Résident 5j/semaine 190 €/mois</li>
+                        </ul>
+                        <li><a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">Le coworking à la Cantine Numérique Rennaise</a></li>
+                        <ul>
+                            <li>La journée 10 €</li>
+                            <li>Résident 3j/semaine : 85 €/mois</li>
+                            <li>Résident 5j/semaine : 120 €/mois</li>
+                        </ul>
+                    </ul>
+
+                    <h3 id="q7">Quelles différences avec un télécentre (exemple Regus)</h3>
+
+                        <p>Un <a href="http://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9centre">Télécentre</a> (exemple <a href="http://fr.wikipedia.org/wiki/Regus">Regus</a>)
+                        est une société qui propose à ses clients des bureaux entièrement équipés, 
+                        des bureaux virtuels et des salles de réunions.</p>
+
+                        <p>Contrairement à un télécentre, un espace de Coworking est plus orienté 
+                        communauté… le but est de favoriser les échanges entre les coworkeurs.</p>
+
+                        <p>Un espace de coworking sera beaucoup moins cher (avec
+                        des services moindres) que les solutions proposées par un télécentre.</p>
+            </div>
+        </div>
+    </section>
+    <section id="liens-externes">
+        <div class="row">
+            <div class="span12">
+                <h2>Liens externes<a href="#liens-externes" class="deep-link"></a></h2>
+
+                <ul>
+                    <li><a href="https://docs.google.com/presentation/pub?id=15peXc0ncRXTufunyoPbmltZuJpnrMuVGJFmJyeCePUc&start=false&loop=false&delayms=3000"
+                        >Présentation du concept de Cantine Numérique</a></li>
+                    <li><a href="http://coworkinginitiatives.com/au-dela/">Page « En savoir plus sur le coworking » du site Coworking Initiatives</a></li>
+                    <li><a href="http://coworkinginitiatives.com/wiki/index.php/Coworking_How_To">Coworking How To</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div><!-- container -->
         <script type="text/javascript" charset="utf-8">
             $(window).ready(function() {
                 $('[name="survey-form"]').submit(function() {
@@ -1081,17 +1064,5 @@ fjs.parentNode.insertBefore(js, fjs);
                 );
             });
         </script>
-        <!-- Piwik -->
-        <script type="text/javascript">
-        var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.stephane-klein.info/" : "http://piwik.stephane-klein.info/");
-        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-        </script><script type="text/javascript">
-        try {
-        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
-        piwikTracker.trackPageView();
-        piwikTracker.enableLinkTracking();
-        } catch( err ) {}
-        </script><noscript><p><img src="http://piwik.stephane-klein.info/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
-        <!-- End Piwik Tracking Code -->
     </body>
 </html>

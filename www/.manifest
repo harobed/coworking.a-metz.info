@@ -1,0 +1,4 @@
+global-include *
+prune _build/
+prune includes/
+exclude .manifest .assets.yaml .bowerrc bower.json
