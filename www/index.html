@@ -1,21 +1,6 @@
 # -*- encoding:utf-8 -*-
 <%inherit file="includes/layout.html"/>
 
-<div class="container">
-    <header>
-        <div class="row">
-            <div class="span6">
-                <h1>Coworking à Metz</h1>
-                <p class="lead">Projet de création d'une cantine numérique</p>
-
-                <img 
-                    class="logo"
-                    src="img/coworking_logo.png"
-                    title="Logo du mouvement coworking"
-                    />
-            </div>
-        </div><!-- row -->
-    </header>
     <section>
         <div class="row">
             <div class="span12">
@@ -376,7 +361,7 @@ fjs.parentNode.insertBefore(js, fjs);
                         <td class="center">X</td>
                     </tr>
                     <tr>
-                        <td class="center">Anonyme XB</a></td>
+                        <td class="center">Anonyme XB</td>
                         <td>2 jours par semaine en emplacement libre</td>
                         <td class="center">X</td>
                         <td class="center">X</td>
@@ -394,7 +379,7 @@ fjs.parentNode.insertBefore(js, fjs);
                         <td class="center">X</td>
                     </tr>
                     <tr>
-                        <td class="center">Anonyme ST</a></td>
+                        <td class="center">Anonyme ST</td>
                         <td>5 jours par semaine en emplacement fixe ou bureau fermé</td>
                         <td class="center">X</td>
                         <td class="center">X</td>
@@ -538,7 +523,7 @@ fjs.parentNode.insertBefore(js, fjs);
                         <td class="center"></td>
                     </tr>
                     <tr>
-                        <td class="center">Anonyme PS</a></td>
+                        <td class="center">Anonyme PS</td>
                         <td>Ponctuellement en emplacement libre</td>
                         <td class="center">X</td>
                         <td class="center"></td>
@@ -726,7 +711,7 @@ fjs.parentNode.insertBefore(js, fjs);
                 <p>Par conséquent, pour le moment, ces ressources financières ne permettent pas de financer l'espace
                 de coworking.</p>
             </div><!-- span12 -->
-        <div><!-- row -->
+        </div><!-- row -->
     </section>
     <section id="complement-information-espace-coworking">
         <div class="row">
@@ -913,18 +898,20 @@ fjs.parentNode.insertBefore(js, fjs);
                     espaces de coworking :</p>
 
                     <ul>
-                        <li><a href="http://www.poudriere.org/#rejoindre">À la poudrière de Nancy</a></li>
-                        <ul>
-                            <li>1/2 journée 7 €</li>
-                            <li>La journée 10 €</li>
-                            <li>Résident 5j/semaine 190 €/mois</li>
-                        </ul>
-                        <li><a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">Le coworking à la Cantine Numérique Rennaise</a></li>
-                        <ul>
-                            <li>La journée 10 €</li>
-                            <li>Résident 3j/semaine : 85 €/mois</li>
-                            <li>Résident 5j/semaine : 120 €/mois</li>
-                        </ul>
+                        <li><a href="http://www.poudriere.org/#rejoindre">À la poudrière de Nancy</a>
+                            <ul>
+                                <li>1/2 journée 7 €</li>
+                                <li>La journée 10 €</li>
+                                <li>Résident 5j/semaine 190 €/mois</li>
+                            </ul>
+                        </li>
+                        <li><a href="http://www.lacantine-rennes.net/la-cantine-a-rennes/coworking-a-la-cantine/">Le coworking à la Cantine Numérique Rennaise</a>
+                            <ul>
+                                <li>La journée 10 €</li>
+                                <li>Résident 3j/semaine : 85 €/mois</li>
+                                <li>Résident 5j/semaine : 120 €/mois</li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <h3 id="q7">Quelles différences avec un télécentre (exemple Regus)</h3>
@@ -955,7 +942,7 @@ fjs.parentNode.insertBefore(js, fjs);
             </div>
         </div>
     </section>
-</div><!-- container -->
+<%block name="head">
         <script type="text/javascript" charset="utf-8">
             $(window).ready(function() {
                 $('[name="survey-form"]').submit(function() {
@@ -1087,5 +1074,4 @@ fjs.parentNode.insertBefore(js, fjs);
                 );
             });
         </script>
-    </body>
-</html>
+</%block>
