@@ -24,4 +24,4 @@ def upload_beta():
 
 @task
 def upload_prod():
-    os.system("rsync -e 'ssh -p 2225' -v -r --delete %s coworking-metz@harobed-vs1.stephane-klein.info:coworking.a-metz.info/" % here('build/'))
+    os.system("rsync -e 'ssh -p 2225' -v -r --exclude='slides/2013-06-27/' --delete %s coworking-metz@harobed-vs1.stephane-klein.info:coworking.a-metz.info/" % here('build/'))

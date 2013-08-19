@@ -26,3 +26,32 @@ Build
     $ bower install
     $ bin/tacot src/ -o build/
 
+
+Other tasks
+===========
+
+Use fabric to execute some standard tasks :
+
+::
+
+    $ bin/fab -l
+    Available commands:
+
+        build
+        clean
+        upload_beta
+        upload_prod
+
+To build :
+
+::
+
+    $ bin/fab build
+
+To upload to production hosting :
+
+::
+
+    $ bin/fab upload_prod
+
+...
