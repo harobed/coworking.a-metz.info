@@ -1,3 +1,4 @@
 tacot
 fabric
 cssmin
+static
