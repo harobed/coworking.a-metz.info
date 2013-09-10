@@ -1,4 +1,5 @@
 {
+    "name": "coworking.a-metz.info",
     "dependencies": {
         "sass-bootstrap": "2.3.1",
         "jquery": "*",
