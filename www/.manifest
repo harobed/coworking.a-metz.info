@@ -1,7 +1,5 @@
 global-include *
-prune build/
 prune includes/
 prune static/.sass-cache/
 prune static/.webassets-cache/
-prune static/build/
 exclude .manifest .assets.yaml .bowerrc bower.json
