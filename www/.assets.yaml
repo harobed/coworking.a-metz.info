@@ -1,6 +1,6 @@
 directory: static
 url: /static
-debug: False
+debug: True
 updater: timestamp
 bundles:
     main_js:
@@ -9,6 +9,7 @@ bundles:
         contents:
             - components/jquery-waypoints/waypoints.js
             - components/sass-bootstrap/js/bootstrap-alert.js
+            - components/sass-bootstrap/js/bootstrap-carousel.js
 
     main_css:
         filters:

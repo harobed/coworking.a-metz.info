@@ -15,6 +15,31 @@
             </div>
         </div>
     </section>
+    <section id="carousel">
+        <div class="row">
+            <div class="span12">
+                <div id="main-carousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#main-carousel" data-slide-to="1"></li>
+                        <li data-target="#main-carousel" data-slide-to="2"></li>
+                        <li data-target="#main-carousel" data-slide-to="3"></li>
+                        <li data-target="#main-carousel" data-slide-to="4"></li>
+                    </ol>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active"><img src="img/carousel/verriere-4-900.jpeg" /></div>
+                        <div class="item"><img src="img/carousel/bureaux-partages.jpg" /></div>
+                        <div class="item"><img src="img/carousel/Cave.jpg" /></div>
+                        <div class="item"><img src="img/carousel/trombi.jpg" /></div>
+                        <div class="item"><img src="img/carousel/vitrine2.jpg" /></div>
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#main-carousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#main-carousel" data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
+    </section>
     <section id="news">
         <div class="row">
             <div class="span12">
@@ -972,6 +997,7 @@ fjs.parentNode.insertBefore(js, fjs);
                     return false;
                 });
                 $(".alert").alert();
+                $('.carousel').carousel();
             });
             $(window).load(function() {
                 $('#qu-est-ce-que-serait-ce-lieux').waypoint(
