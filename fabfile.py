@@ -19,9 +19,9 @@ def clean():
 
 @task
 def upload_beta():
-    os.system("rsync -e 'ssh -p 2225' -v -r --delete %s coworking-metz@harobed-vs1.stephane-klein.info:beta.coworking.a-metz.info/" % here('build/'))
+    os.system("rsync -e 'ssh -p 2010' -v -r --delete %s coworking-metz@santa-maria.stephane-klein.info:beta.coworking.a-metz.info/" % here('build/'))
 
 
 @task
 def upload_prod():
-    os.system("rsync -e 'ssh -p 2225' -v -r --exclude='slides/2013-06-27/' --delete %s coworking-metz@harobed-vs1.stephane-klein.info:coworking.a-metz.info/" % here('build/'))
+    os.system("rsync -e 'ssh -p 2010' -v -r --exclude='slides/2013-06-27/' --delete %s coworking-metz@santa-maria.stephane-klein.info:coworking.a-metz.info/" % here('build/'))
