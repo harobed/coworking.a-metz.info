@@ -24,7 +24,7 @@ Build
 ::
 
     $ bower install
-    $ bin/tacot src/ -o build/
+    $ bin/tacot www/ -o build/
 
 
 Other tasks
