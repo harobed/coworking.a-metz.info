@@ -6,7 +6,8 @@
 
         <title>Projet d'espace de Coworking à Metz<%block name="title"/></title>
 
-        <script charset="utf-8" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://jappix.coworking.a-metz.info/mini/javascripts/mini.js"></script>
         % for url in assets['main_css'].urls():
             <link rel="stylesheet" href="${root_path(url)}" type="text/css" media="screen" charset="utf-8" />
         % endfor
@@ -15,6 +16,36 @@
         % endfor
         <%block name="head">
         </%block>
+     <script type="text/javascript">
+       jQuery(document).ready(function() {
+         JAPPIX_STATIC = "http://jappix.coworking.a-metz.info/mini/";
+         HOST_BOSH = "http://jappix.coworking.a-metz.info:5280/http-bind"
+         DEVELOPER = 'on';
+         ANONYMOUS = 'on';
+
+         JappixMini.launch({
+           connection: {
+             /*user: 'stephane',
+             password: 'password',*/
+             domain: 'anonymous.jappix.coworking.a-metz.info'
+           },
+           application: {
+                network: {
+                    autoconnect: false
+                },
+
+                interface: {
+                    showpane: true,
+                    animate: true
+                },
+
+                groupchat: {
+                    open: ['coworking@muc.jappix.coworking.a-metz.info'],
+                }
+           }
+         });
+       });
+     </script>
     </head>
 <body>
     <a href="https://github.com/harobed/coworking.a-metz.info"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
