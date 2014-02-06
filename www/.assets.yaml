@@ -1,0 +1,19 @@
+directory: static
+url: /static
+debug: True
+updater: timestamp
+bundles:
+    main_js:
+        output: build/main.js
+        contents:
+            - components/jquery/jquery.js
+            - components/bootstrap/js/button.js
+
+    main_css:
+        filters:
+            - cssrewrite
+            - less
+        output: build/main.css
+        contents:
+            - components/bootstrap/less/bootstrap.less
+            - css/screen.less

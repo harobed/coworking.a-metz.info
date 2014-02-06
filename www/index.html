@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coworking Metz - Espace de travail et de partage à Metz</title>
+
+        <link href="static/build/main.css" rel="stylesheet">
+        <script src="static/build/main.js"></script>
+        <script type="text/javascript" src="http://jappix.coworking.a-metz.info/mini/javascripts/mini.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                JAPPIX_STATIC = "http://jappix.coworking.a-metz.info/mini/";
+                HOST_BOSH = "http://jappix.coworking.a-metz.info:5280/http-bind";
+                DEVELOPER = 'on';
+                ANONYMOUS = 'on';
+
+                JappixMini.launch({
+                    connection: {
+                        domain: 'anonymous.jappix.coworking.a-metz.info'
+                    },
+                    application: {
+                        network: {
+                            autoconnect: false
+                        },
+
+                        interface: {
+                            showpane: true,
+                            animate: true
+                        },
+
+                        groupchat: {
+                            open: ['coworking@muc.jappix.coworking.a-metz.info'],
+                        }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a href="https://github.com/harobed/coworking.a-metz.info"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        <div class="container">
+            <div class="row">
+                <h1 class="logo">
+                    <img src="images/coworking-logo.png" />Coworking Metz
+                    <p class="lead">Espace de travail et de partage</p>
+                </h1>
+            </div><!-- /row -->
+            <div class="row">
+            </div>
+        </div><!-- /container -->
+    </body>
+</html>
+

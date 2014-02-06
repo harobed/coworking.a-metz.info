@@ -1,0 +1,9 @@
+{
+    "name": "coworking-a-metz",
+    "dependencies": {
+        "bootstrap": "3.1.0",
+        "font-awesome": "4.0.3",
+        "modernizr": "2.7.1",
+        "jquery": "2.1.0"
+    }
+}

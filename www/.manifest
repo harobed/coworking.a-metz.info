@@ -1,0 +1,5 @@
+global-include *
+prune includes/
+prune static/.webassets-cache/
+prune static/components/
+exclude .manifest .assets.yaml

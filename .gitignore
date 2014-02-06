@@ -1,0 +1,12 @@
+.DS_Store
+.Python
+bin/
+build/
+*.pyc
+include/
+lib/
+node_modules/
+_build/
+share/
+www/static/.webassets-cache/
+www/static/components/
