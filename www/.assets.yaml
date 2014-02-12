@@ -8,6 +8,12 @@ bundles:
         contents:
             - components/jquery/jquery.js
             - components/bootstrap/js/button.js
+            - components/bootstrap/js/affix.js
+            - components/bootstrap/js/collapse.js
+            - components/bootstrap/js/carousel.js
+            - components/sequencejs/scripts/jquery.sequence.js
+            - components/holderjs/holder.js
+            - js/main.js
 
     main_css:
         filters:

@@ -1,4 +1,24 @@
+.navbar-custom {
+    background-color: white;
+    border: none;
+
+    .navbar-nav > li {
+        > A {
+            padding: 37px 18px;
+            font-weight: 400;
+            font-size: 15px;
+        }
+        &.active {
+            > A {
+                background-color: #59B2E5;
+                color: white;
+            }
+        }
+    }
+}
+
 .logo {
+    cursor: pointer;
     position: relative;
     padding-left: 64px;
     IMG {
@@ -16,3 +36,253 @@
 #jappix_mini a.jm_pane {
     height: 30px!important;
 }
+
+.header {
+    height: 110px;
+}
+
+.page-welcome {
+    background: url('../../images/slideshow/blida3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.overlay {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAHUlEQVQIW2NkYGD4D8SM6DRIAAQwJDFUwhRRUQcALRkSBISGlPAAAAAASUVORK5CYII=") repeat scroll left top rgba(0, 0, 0, 0);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#sequence {
+    width: 100%;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    position: relative; /* required */
+    overflow: hidden;
+
+    .sequence-next, .sequence-prev {
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline;
+        font-size: 30px;
+        font-weight: bold;
+        height: 41px;
+        opacity: 0.4;
+        position: absolute;
+        top: 220px;
+        transition-duration: 0.4s;
+        width: 39px;
+        z-index: 20;
+    }
+
+    .sequence-next {
+        right: 40px;
+    }
+    .sequence-prev {
+        left: 40px;
+    }
+
+    .sequence-next:hover, .sequence-prev:hover {
+        opacity: 1;
+        transform: scale(1.2);
+        transition-duration: 0.4s;
+    }
+
+    > .sequence-canvas {
+        height: 100%; 
+        width: 100%;
+        list-style: none;
+    
+        > LI {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        LI > * {  /* required */
+            position: absolute;
+        }
+    }
+
+    .info1,
+    .info2,
+    .info3,
+    .info4,
+    .info5,
+    .info6 {
+        color: white;
+        font-size: 16px;
+        H2 {
+            font-size: 40px;
+        }
+
+        top: 80px;
+    }
+    .info1,
+    .info3,
+    .info4,
+    .info5,
+    .info6 {
+        top: 140px;
+    }
+
+    .info1,
+    .info2,
+    .info3,
+    .info4,
+    .info5,
+    .info6 {
+        left: -500px;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -ms-transition-duration: 1s;
+        transition-duration: 1s;
+    }
+    .image1, 
+    .image2,
+    .image3,
+    .image4,
+    .image5,
+    .image6 {
+        top: -600px;
+        left: 80px;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -ms-transition-duration: 1s;
+        transition-duration: 1s;
+    }
+    .animate-in {
+        .info1,
+        .info2,
+        .info3,
+        .info4,
+        .info5,
+        .info6 {
+            left: 620px;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            -ms-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+        .image1,
+        .image2,
+        .image3,
+        .image4,
+        .image5,
+        .image6 {
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            -ms-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+
+        .image1,
+        .image3 {
+            top: 120px;
+        }
+        .image2,
+        .image4,
+        .image5,
+        .image6 {
+            top: 40px;
+        }
+    }
+
+    .animate-out {
+        .info1,
+        .info2,
+        .info3,
+        .info4,
+        .info5,
+        .info6 {
+            left: 2000px;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            -ms-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+        .image1,
+        .image2,
+        .image3,
+        .image4,
+        .image5,
+        .image6 {
+            top: 800px;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            -ms-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+    }
+}
+
+.info-box {
+    background-color: #DCEAF4;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    H3 {
+        margin-top: 0;
+    }
+}
+
+.table-budget {
+    CAPTION {
+        margin: 10px 0;
+    }
+    width: auto;
+    margin: 20px 0 20px 80px;
+    .montant {
+        text-align: right;
+    }
+    .total {
+        border-top: 2px solid black;
+    }
+
+    TH {
+        border-bottom: 1px solid black;
+    }
+}
+
+.moneymeter {
+    width: 300px;
+    .paid {
+        border-radius: 10px 0 0 10px; 
+        background-color: #428BCA;
+        color: white;
+        padding: 5px;
+        white-space: nowrap;
+    }
+    .unpaid {
+        background-color: #F5F5F5;
+        border-radius: 0 10px 10px 0; 
+    }
+    margin: 20px 20px;
+}
+
+#footer {
+    background-color: #F5F5F5;
+    border-top: 1px solid #E5E5E5;
+    .container {
+        text-align: center;
+        font-size: small;
+        padding: 40px 0;
+    }
+}
+

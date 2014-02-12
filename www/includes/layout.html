@@ -1,0 +1,109 @@
+# -*- encoding:utf-8 -*-
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coworking Metz - Espace de travail et de partage à Metz</title>
+
+        <link href="static/build/main.css" rel="stylesheet">
+        <script src="static/build/main.js"></script>
+        <script type="text/javascript" src="http://jappix.coworking.a-metz.info/mini/javascripts/mini.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                JAPPIX_STATIC = "http://jappix.coworking.a-metz.info/mini/";
+                HOST_BOSH = "http://jappix.coworking.a-metz.info:5280/http-bind";
+                DEVELOPER = 'on';
+                ANONYMOUS = 'on';
+
+                JappixMini.launch({
+                    connection: {
+                        domain: 'anonymous.jappix.coworking.a-metz.info'
+                    },
+                    application: {
+                        network: {
+                            autoconnect: false
+                        },
+
+                        interface: {
+                            showpane: true,
+                            animate: true
+                        },
+
+                        groupchat: {
+                            open: ['coworking@muc.jappix.coworking.a-metz.info'],
+                        }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a href="https://github.com/harobed/coworking.a-metz.info"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        <div class="container header">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-custom" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <h1 class="logo" onclick="document.location.href='http://coworking.a-metz.info'">
+                                    <img src="images/coworking-logo.png" />Coworking Metz
+                                    <p class="lead">Espace de travail et de partage</p>
+                                </h1>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html">Accueil</a></li>
+                                    <%doc>
+                                    <li><a href="#">Actualités</a></li>
+                                    <li><a href="#">Les coworkers</a></li>
+                                    </%doc>
+                                    <li><a href="http://forum.coworking.a-metz.info">Forum</a></li>
+                                    <li><a href="tarifs.html">Tarifs</a></li>
+                                    <li><a href="http://coworking.a-metz.info">Ancienne version du site</a></li>
+                                    <%doc>
+                                    <li><a href="#">Plan / Contact</a></li>
+                                    </%doc>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                    </nav>
+                </div><!-- col-md-12 -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="width: 850px; margin: 0 auto 20px auto">
+                    <div class="pull-left">
+                        <p style="margin-top: 12px;">
+                            Somme récoltée : 200 €<br />
+                            Budget total : 3730 €
+                        </p>
+                    </div>
+                    <div class="pull-left">
+                        <table class="moneymeter">
+                            <tr>
+                                <td class="paid" width="5%">5 %</td>
+                                <td class="unpaid"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pull-left" style="padding-top: 15px;">
+                        <a href="" class="btn btn-primary">Précommande de ticket pour aider à financer...</a>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                </div><!-- col-md-12 -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+        ${self.body()}
+        <div id="footer">
+            <div class="container">
+                <a href="http://coworking.a-metz.info">Espace coworking Metz</a> — <a href="contact@stephane-klein.info">contact@stephane-klein.info</a> — <a href="https://github.com/harobed/coworking.a-metz.info">code source</a>
+            </div><!-- container -->
+        </div><!-- footer -->
+    </body>
+</html>
