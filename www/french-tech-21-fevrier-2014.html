@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        % for url in assets['main_css'].urls():
+            <link rel="stylesheet" href="${root_path(url)}" type="text/css" media="screen" charset="utf-8" />
+        % endfor
+        % for url in assets['main_js'].urls():
+            <script src="${root_path(url)}" type="text/javascript" charset="utf-8"></script>
+        % endfor
+
+        <title>Invitation au lancement de la candidature « French Tech » à Metz</title>
+        <style type="text/css">
+            H1 {
+                margin: 60px;
+                text-align: center;
+            }
+
+            P {
+                font-size: 18px;
+                line-height: 30px;
+                margin: 20px 0;
+            }
+
+            .justify {
+                text-align: justify;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+
+            .big {
+                font-size: 28px;
+                line-height: 40px;
+                text-align: center;
+            }
+            .big P {
+                margin: 20px 0;
+                font-size: 28px;
+                line-height: 40px;
+            }
+
+            H2 {
+                margin: 40px 0;
+                font-size: 30px;
+            }
+
+            UL > LI {
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span12" style="position: relative">
+                    <!--
+                    <img 
+                        style="position: absolute; top: 100px; left: 20px;"
+                        src="img/logotype-French-Tech.png" />
+                    <img 
+                        style="position: absolute; top: 100px; right: 20px;"
+                        src="img/logotype-sillon-lorrain.jpeg" />
+                    -->
+                    <h1>Candidature « French Tech »</h1>
+
+                    <div class="big">
+                        <p>Invitation au lancement</p>
+
+                        <p>Vendredi 21 février 2014<br />
+                        17h - 20h</p>
+
+                        <p>Amphithéâtre du Cescom<br />
+                        <a href="http://www.openstreetmap.org/?mlat=49.10077&mlon=6.21582#map=17/49.10077/6.21582">4 rue Marconi - Metz</a></p>
+                    </div>
+
+                    <h2>Construisons ensemble l’écosystème numérique du Sillon Lorrain</h2>
+
+                    <p class="justify">L'objectif de l'initiative « <a href="http://www.lafrenchtech.com/">French Tech</a> »,
+                    portée par le ministère du Redressement Productif, est de favoriser
+                    l'émergence de champions du numérique.</p>
+
+                    <p class="justify">Les métropoles, qui stimulent la création et le développement de
+                    champions du numérique en se constituant en écosystèmes d’acteurs publics
+                    et privés très dynamiques, pourront bénéficier d’un label « French Tech »
+                    à vocation internationale.</p>
+
+                    <p class="justify bold">Le <a href="http://www.aduan.fr/sillonlorrain/">Sillon Lorrain</a>
+                    porte une candidature commune aux villes et
+                    agglomérations d’Epinal, Metz, Nancy et Thionville pour le label « French Tech ».</p>
+
+                    <p class="justify">Avec cette soirée de lancement, le Sillon Lorrain souhaite initier la
+                    co-construction de son ambition et de son projet de territoire avec les
+                    entrepreneurs, les associations, les acteurs de la formation et de la
+                    recherche qui sont les moteurs de l’écosystème.</p>
+
+                    <p>Programme :</p>
+
+                    <ul>
+                        <li>« Le Sillon Lorrain candidat au label French Tech » (Orateur : Président du Sillon Lorrain)</li>
+                        <li>« Les écosystèmes métropolitains se mobilisent » (Orateurs : Associations d’acteurs du numérique)</li>
+                        <li>« L’ambition territoriale pour la croissance et la visibilité des entreprises numériques » (Orateurs : Représentants du Sillon Lorrain)</li>
+                        <li>« Les clés de l'appel à projet "French Tech" - Plan d’action » (Orateurs : E. Pawlak (Grand Nancy) – P. Henaux (Metz Métropole))</li>
+                        <li>Networking autour d'un cocktail</li>
+                    </ul>
+
+                    <p>Merci de confirmer votre participation à <a href="mailto:phenaux@mairie-metz.fr">phenaux@mairie-metz.fr</a></p>
+                    <div style="text-align: center">
+                        <img 
+                            style="padding: 0 60px;"
+                            src="img/logotype-French-Tech.png" />
+                        <img src="img/logotype-sillon-lorrain.jpeg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
