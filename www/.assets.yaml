@@ -22,4 +22,5 @@ bundles:
         output: build/main.css
         contents:
             - components/bootstrap/less/bootstrap.less
+            - css/sticky-footer.css
             - css/screen.less

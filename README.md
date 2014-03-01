@@ -4,6 +4,9 @@
     $ ./assets_postinstall.sh
     $ bin/tacot -v www
 
+TODO : Missing composer installation instruction.
+
+
 In another terminal, start :
 
 ::

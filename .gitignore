@@ -10,3 +10,8 @@ _build/
 share/
 www/static/.webassets-cache/
 www/static/components/
+sdk_config.ini
+PayPal.log
+www/vendor/
+composer.lock
+composer.phar

@@ -38,9 +38,11 @@
                 });
             });
         </script>
+        <%block name="head"></%block>
     </head>
     <body>
         <a href="https://github.com/harobed/coworking.a-metz.info"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        <div id="wrap">
         <div class="container header">
             <div class="row">
                 <div class="col-md-12">
@@ -55,14 +57,14 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a href="index.html">Accueil</a></li>
+                                    <li ${'class="active"' if current_page == 'index.html' else '' }><a href="index.html">Accueil</a></li>
                                     <%doc>
                                     <li><a href="#">Actualités</a></li>
                                     <li><a href="#">Les coworkers</a></li>
                                     </%doc>
                                     <li><a href="http://forum.coworking.a-metz.info">Forum</a></li>
-                                    <li><a href="tarifs.html">Tarifs</a></li>
-                                    <li><a href="http://coworking.a-metz.info">Ancienne version du site</a></li>
+                                    <li ${'class="active"' if current_page == 'tarifs.html' else '' }><a href="tarifs.html">Tarifs</a></li>
+                                    <li><a href="http://2012-2014.coworking.a-metz.info">Ancienne version du site</a></li>
                                     <%doc>
                                     <li><a href="#">Plan / Contact</a></li>
                                     </%doc>
@@ -73,36 +75,11 @@
                 </div><!-- col-md-12 -->
             </div><!-- /row -->
         </div><!-- /container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div style="width: 850px; margin: 0 auto 20px auto">
-                    <div class="pull-left">
-                        <p style="margin-top: 12px;">
-                            Somme récoltée : 200 €<br />
-                            Budget total : 3730 €
-                        </p>
-                    </div>
-                    <div class="pull-left">
-                        <table class="moneymeter">
-                            <tr>
-                                <td class="paid" width="5%">5 %</td>
-                                <td class="unpaid"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="pull-left" style="padding-top: 15px;">
-                        <a href="" class="btn btn-primary">Précommande de tickets pour aider à financer...</a>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                </div><!-- col-md-12 -->
-            </div><!-- /row -->
-        </div><!-- /container -->
         ${self.body()}
+        </div><!-- /wrap -->
         <div id="footer">
             <div class="container">
-                <a href="http://coworking.a-metz.info">Espace coworking Metz</a> — <a href="contact@stephane-klein.info">contact@stephane-klein.info</a> — <a href="https://github.com/harobed/coworking.a-metz.info">code source</a>
+                <a href="http://coworking.a-metz.info">Espace coworking Metz</a> — <a href="coworking@a-metz.info">coworking@a-metz.info</a> — <a href="https://github.com/harobed/coworking.a-metz.info">code source</a>
             </div><!-- container -->
         </div><!-- footer -->
     </body>

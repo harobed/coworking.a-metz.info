@@ -122,7 +122,7 @@
         color: white;
         font-size: 16px;
         H2 {
-            font-size: 40px;
+            font-size: 34px;
         }
 
         top: 80px;
@@ -189,10 +189,10 @@
             transition-duration: 1s;
         }
 
-        .image1,
         .image3 {
             top: 120px;
         }
+        .image1,
         .image2,
         .image4,
         .image5,
@@ -286,3 +286,28 @@
     }
 }
 
+H2 {
+    margin: 40px 0 20px 0;
+
+}
+
+H1, H2, H3, H4 {
+    position: relative;
+}
+
+A.deep-link {
+    background: url("../img/link_16.png") repeat scroll 0 0 transparent;
+    display: block;
+    height: 16px;
+    margin-top: -8px;
+    opacity: 0.1;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transition: opacity 0.5s linear 0s;
+    width: 16px;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
