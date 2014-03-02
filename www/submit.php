@@ -9,6 +9,7 @@ $lastname = $_POST['lastname'];
 $adhesion = $_POST['adhesion'] == 'on';
 $unit_ticket = intval($_POST['unit_ticket']);
 $ticket10 = intval($_POST['ticket10']);
+$donation = intval($_POST['donation']);
 
 
 define("PP_CONFIG_PATH", __DIR__ . '/../');
@@ -50,7 +51,7 @@ if ($adhesion) {
     $total += 10;
 }
 
-$total += ($unit_ticket * 6) + ($ticket10 * 40);
+$total += ($unit_ticket * 6) + ($ticket10 * 40) + $donation;
 
 $amount->setTotal($total);
 
@@ -79,6 +80,15 @@ if ($ticket10 > 0) {
     $item->setQuantity(strval($ticket10));
     $item->setName("Carnet de 10 tickets pour $firstname $lastname");
     $item->setPrice('40');
+    $item->setCurrency('EUR');
+    array_push($tmp, $item);
+}
+
+if ($donation) {
+    $item = new Item();
+    $item->setQuantity("1");
+    $item->setName("Don de $firstname $lastname");
+    $item->setPrice(strval($donation));
     $item->setCurrency('EUR');
     array_push($tmp, $item);
 }

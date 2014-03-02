@@ -288,7 +288,7 @@
                                         placeholder="0"
                                         style="width: 8em; display: inline; text-align: right;" 
                                     />&nbsp;&nbsp;x&nbsp;6 €
-                                    <span class="help-block">1 ticket donne droit à 1 jour d'accès à l'espace Coworking</span>
+                                    <span class="help-block">1 ticket donne droit à 1 jour d'accès à l'espace Coworking. L'adhésion n'est pas obligatoire.</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -302,6 +302,20 @@
                                         placeholder="0"
                                         style="width: 8em; display: inline; text-align: right;" 
                                     />&nbsp;&nbsp;x&nbsp;40 €
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="donation" class="col-sm-2 control-label">Don :</label>
+                                <div class="col-sm-8">
+                                    <input 
+                                        type="text"
+                                        name="donation"
+                                        id="donation"
+                                        class="form-control"
+                                        placeholder="0"
+                                        style="width: 8em; display: inline; text-align: right;" 
+                                    />&nbsp;&nbsp; €
+                                    <span class="help-block">Vous pouvez aussi faire simplement un don sans adhésion par exemple</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -337,25 +351,26 @@
             }
             var unit_ticket = parseInt($('[name="unit_ticket"]').val(), 10);
             var ticket10 = parseInt($('[name="ticket10"]').val(), 10);
+            var donation = parseInt($('[name="donation"]').val(), 10);
             
-            if (isNaN(unit_ticket)) {
+            if (isNaN(unit_ticket) || (unit_ticket < 0)) {
                 unit_ticket = 0;
             }
-            if (unit_ticket < 0)
-                unit_ticket = 0;
 
-            if (isNaN(ticket10)) {
+            if (isNaN(ticket10) || (ticket10 < 0)) {
                 ticket10 = 0;
             }
-            if (ticket10 < 0)
-                ticket10 = 0;
 
-            total += (unit_ticket * 6) + (ticket10 * 40);
+            if (isNaN(donation) || (donation < 0)) {
+                donation = 0;
+            }
+
+            total += (unit_ticket * 6) + (ticket10 * 40) + donation;
             $('[name="total"]').val(total);
         }
         $(document).ready(function() {
             compute_total();
-            $('[name="adhesion"],[name="unit_ticket"],[name="ticket10"]').on('change keyup', function() {
+            $('[name="adhesion"],[name="unit_ticket"],[name="ticket10"],[name="donation"]').on('change keyup', function() {
                 compute_total();
             });
         });
