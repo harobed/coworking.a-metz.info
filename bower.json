@@ -6,6 +6,7 @@
         "modernizr": "2.7.1",
         "jquery": "2.1.0",
         "sequencejs": "*",
-        "holderjs": "*"
+        "holderjs": "*",
+        "loremjs": "*"
     }
 }

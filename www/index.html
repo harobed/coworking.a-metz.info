@@ -6,20 +6,21 @@
                     <div style="width: 850px; margin: 0 auto 20px auto">
                     <div class="pull-left">
                         <p style="margin-top: 12px;">
-                            <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 830 €</a><br />
+                            <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 1300 €</a><br />
                             Budget total : 3730 €
                         </p>
                     </div>
                     <div class="pull-left">
                         <table class="moneymeter">
                             <tr>
-                                <td class="paid" width="22%">22 %</td>
+                                <td class="paid" width="35%" style="text-align: center">35 %</td>
                                 <td class="unpaid"></td>
                             </tr>
                         </table>
+                        <div style="text-align: center; font-size: 10px; line-height: 20px;">Dernière mise à jour de la jauge : 5 mars 2014</div>
                     </div>
                     <div class="pull-left" style="padding-top: 15px;">
-                        <a href="#formulaire-paypal" class="btn btn-primary">Précommande de tickets pour aider à financer...</a>
+                        <a href="#formulaire-paypal" class="btn btn-warning">Précommande de tickets pour aider à financer...</a>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -203,14 +204,14 @@
 
                     <div class="pull-left">
                         <p style="margin-top: 12px;">
-                            <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 830 €</a><br />
+                            <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 1300 €</a><br />
                             Budget total : 3730 €
                         </p>
                     </div>
                     <div class="pull-left">
                         <table class="moneymeter">
                             <tr>
-                                <td class="paid" width="22%">22 %</td>
+                                <td class="paid" width="35%" style="text-align: center">35 %</td>
                                 <td class="unpaid"></td>
                             </tr>
                         </table>
@@ -344,6 +345,19 @@
 <%block name="head">
     ${parent.head()}
     <script type="text/javascript">
+        $(document).ready(function() {
+            var sequence = $("#sequence").sequence({
+                autoPlay: true,
+                nextButton: true,
+                prevButton: true,
+                preloader: true,
+                navigationSkip: false
+            }).data("sequence");
+
+            sequence.afterLoaded = function(){
+                $(".sequence-prev, .sequence-next").fadeIn(500);
+            };
+        });
         function compute_total() {
             var total = 0;
             if ($('[name="adhesion"]')[0].checked) {

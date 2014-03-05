@@ -15,3 +15,8 @@ PayPal.log
 www/vendor/
 composer.lock
 composer.phar
+www/static/fonts/FontAwesome.otf
+www/static/fonts/fontawesome-webfont.eot
+www/static/fonts/fontawesome-webfont.svg
+www/static/fonts/fontawesome-webfont.ttf
+www/static/fonts/fontawesome-webfont.woff
