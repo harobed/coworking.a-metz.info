@@ -6,7 +6,7 @@ bundles:
     main_js:
         output: build/main.js
         contents:
-            - components/jquery/jquery.js
+            - components/jquery/dist/jquery.js
             - components/bootstrap/js/button.js
             - components/bootstrap/js/affix.js
             - components/bootstrap/js/collapse.js
