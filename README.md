@@ -1,6 +1,8 @@
 ::
 
+    $ python bootstrap.py
     $ export LESS_BIN=`pwd`/node_modules/less/bin/lessc
+    $ bower install
     $ ./assets_postinstall.sh
     $ bin/tacot -v www
 
