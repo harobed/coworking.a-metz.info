@@ -2,6 +2,9 @@ directory: static
 url: /static
 debug: True
 updater: timestamp
+config:
+    LESS_AS_OUTPUT: 1
+    LESS_BIN: ../node_modules/less/bin/lessc
 bundles:
     main_js:
         output: build/main.js
@@ -21,7 +24,44 @@ bundles:
             - less
         output: build/main.css
         contents:
-            - components/bootstrap/less/bootstrap.less
+            - components/bootstrap/less/variables.less
+            - components/bootstrap/less/mixins.less
+            - components/bootstrap/less/normalize.less
+            - components/bootstrap/less/scaffolding.less
+            - components/bootstrap/less/type.less
+            - components/bootstrap/less/code.less
+            - components/bootstrap/less/grid.less
+            - components/bootstrap/less/tables.less
+            - components/bootstrap/less/forms.less
+            - components/bootstrap/less/buttons.less
+            - components/bootstrap/less/component-animations.less
+            - components/bootstrap/less/glyphicons.less
+            - components/bootstrap/less/dropdowns.less
+            - components/bootstrap/less/button-groups.less
+            - components/bootstrap/less/input-groups.less
+            - components/bootstrap/less/navs.less
+            - components/bootstrap/less/navbar.less
+            - components/bootstrap/less/breadcrumbs.less
+            - components/bootstrap/less/pagination.less
+            - components/bootstrap/less/pager.less
+            - components/bootstrap/less/labels.less
+            - components/bootstrap/less/badges.less
+            - components/bootstrap/less/jumbotron.less
+            - components/bootstrap/less/thumbnails.less
+            - components/bootstrap/less/alerts.less
+            - components/bootstrap/less/progress-bars.less
+            - components/bootstrap/less/media.less
+            - components/bootstrap/less/list-group.less
+            - components/bootstrap/less/panels.less
+            - components/bootstrap/less/wells.less
+            - components/bootstrap/less/close.less
+            - components/bootstrap/less/modals.less
+            - components/bootstrap/less/tooltip.less
+            - components/bootstrap/less/popovers.less
+            - components/bootstrap/less/carousel.less
+            - components/bootstrap/less/utilities.less
+            - components/bootstrap/less/responsive-utilities.less
+            - components/bootstrap-lightbox/less/bootstrap-lightbox.less
             - components/font-awesome/css/font-awesome.css
             - css/sticky-footer.css
             - css/screen.less
