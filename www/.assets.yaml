@@ -61,7 +61,6 @@ bundles:
             - components/bootstrap/less/carousel.less
             - components/bootstrap/less/utilities.less
             - components/bootstrap/less/responsive-utilities.less
-            - components/bootstrap-lightbox/less/bootstrap-lightbox.less
             - components/font-awesome/css/font-awesome.css
             - css/sticky-footer.css
             - css/screen.less
