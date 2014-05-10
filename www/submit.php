@@ -9,6 +9,7 @@ $lastname = $_POST['lastname'];
 $adhesion = $_POST['adhesion'] == 'on';
 $unit_ticket = intval($_POST['unit_ticket']);
 $ticket10 = intval($_POST['ticket10']);
+$abonnement1mois = intval($_POST['abonnement1mois']);
 $donation = intval($_POST['donation']);
 
 
@@ -51,7 +52,7 @@ if ($adhesion) {
     $total += 10;
 }
 
-$total += ($unit_ticket * 6) + ($ticket10 * 40) + $donation;
+$total += ($unit_ticket * 6) + ($ticket10 * 40) + ($abonnement1mois * 80) + $donation;
 
 $amount->setTotal($total);
 
@@ -80,6 +81,15 @@ if ($ticket10 > 0) {
     $item->setQuantity(strval($ticket10));
     $item->setName("Carnet de 10 tickets pour $firstname $lastname");
     $item->setPrice('40');
+    $item->setCurrency('EUR');
+    array_push($tmp, $item);
+}
+
+if ($abonnement1mois > 0) {
+    $item = new Item();
+    $item->setQuantity(strval($abonnement1mois));
+    $item->setName("Abonnement d'un mois pour $firstname $lastname");
+    $item->setPrice('80');
     $item->setCurrency('EUR');
     array_push($tmp, $item);
 }
