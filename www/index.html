@@ -11,18 +11,18 @@
                     <div style="width: 850px; margin: 0 auto 20px auto">
                         <div class="pull-left">
                             <p style="margin-top: 12px;">
-                                <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 1730 €</a><br />
+                                <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 1880 €</a><br />
                                 Budget total : 3730 €
                             </p>
                         </div>
                         <div class="pull-left">
                             <table class="moneymeter">
                                 <tr>
-                                    <td class="paid" width="46%" style="text-align: center">46 %</td>
+                                    <td class="paid" width="50%" style="text-align: center">50 %</td>
                                     <td class="unpaid"></td>
                                 </tr>
                             </table>
-                            <div style="text-align: center; font-size: 10px; line-height: 20px;">Dernière mise à jour de la jauge : 14 avril 2014</div>
+                            <div style="text-align: center; font-size: 10px; line-height: 20px;">Dernière mise à jour de la jauge : 30 avril 2014</div>
                         </div>
                         <div class="pull-left" style="padding-top: 17px;">
                             <a href="#formulaire-paypal" class="btn btn-success">Commande de tickets / adhésion</a>
@@ -222,14 +222,14 @@
 
                     <div class="pull-left">
                         <p style="margin-top: 12px;">
-                            <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 1730 €</a><br />
+                            <a href="https://docs.google.com/spreadsheet/ccc?key=0AmkJsz6RpA-ydHg1czBubkwyLWlxenRJOUtZZjFfcHc&usp=sharing">Somme récoltée : 1880 €</a><br />
                             Budget total : 3730 €
                         </p>
                     </div>
                     <div class="pull-left">
                         <table class="moneymeter">
                             <tr>
-                                <td class="paid" width="46%" style="text-align: center">46 %</td>
+                                <td class="paid" width="50%" style="text-align: center">50 %</td>
                                 <td class="unpaid"></td>
                             </tr>
                         </table>
@@ -241,10 +241,9 @@
                 </div><!-- row -->
                 <div class="row">
                     <div class="col-md-12" id="formulaire-paypal">
-                        <h2>Formulaire d'adhésion + précommande !<a href="#formulaire-paypal" class="deep-link"></a></h2>
+                        <h2>Formulaire d'adhésion + commande de ticket !<a href="#formulaire-paypal" class="deep-link"></a></h2>
 
-                        <p>Pour nous aider à financer le démarrage du projet, vous pouvez passer
-                        commande via le formulaire suivant :</p>
+                        <p>Pour nous aider à financer le projet, vous pouvez passer commande via le formulaire suivant :</p>
 
                         <form class="form-horizontal" role="form" method="POST" action="submit.php">
                             <div class="form-group">
@@ -324,6 +323,20 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="abonnement1mois" class="col-sm-2 control-label">Abonnement :</label>
+                                <div class="col-sm-8">
+                                    <input
+                                        type="text"
+                                        name="abonnement1mois"
+                                        id="abonnement1mois"
+                                        class="form-control"
+                                        placeholder="0"
+                                        style="width: 8em; display: inline; text-align: right;"
+                                    />&nbsp;&nbsp;x&nbsp;80 € / mois
+                                    <span class="help-block">Un abonnement vous donne accès illimité à l'espace coworking (dans la limite des horaires d'ouverture)</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="donation" class="col-sm-2 control-label">Don :</label>
                                 <div class="col-sm-8">
                                     <input 
@@ -387,6 +400,7 @@
             }
             var unit_ticket = parseInt($('[name="unit_ticket"]').val(), 10);
             var ticket10 = parseInt($('[name="ticket10"]').val(), 10);
+            var abonnement1mois = parseInt($('[name="abonnement1mois"]').val(), 10);
             var donation = parseInt($('[name="donation"]').val(), 10);
             
             if (isNaN(unit_ticket) || (unit_ticket < 0)) {
@@ -397,16 +411,20 @@
                 ticket10 = 0;
             }
 
+            if (isNaN(abonnement1mois) || (abonnement1mois < 0)) {
+                abonnement1mois = 0;
+            }
+
             if (isNaN(donation) || (donation < 0)) {
                 donation = 0;
             }
 
-            total += (unit_ticket * 6) + (ticket10 * 40) + donation;
+            total += (unit_ticket * 6) + (ticket10 * 40) + (abonnement1mois * 80) + donation;
             $('[name="total"]').val(total);
         }
         $(document).ready(function() {
             compute_total();
-            $('[name="adhesion"],[name="unit_ticket"],[name="ticket10"],[name="donation"]').on('change keyup', function() {
+            $('[name="adhesion"],[name="unit_ticket"],[name="ticket10"],[name="abonnement1mois"],[name="donation"]').on('change keyup', function() {
                 compute_total();
             });
         });
