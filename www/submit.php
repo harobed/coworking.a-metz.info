@@ -52,7 +52,7 @@ if ($adhesion) {
     $total += 10;
 }
 
-$total += ($unit_ticket * 6) + ($ticket10 * 40) + ($abonnement1mois * 80) + $donation;
+$total += ($unit_ticket * 6) + ($ticket10 * 40) + ($abonnement1mois * 60) + $donation;
 
 $amount->setTotal($total);
 
@@ -89,7 +89,7 @@ if ($abonnement1mois > 0) {
     $item = new Item();
     $item->setQuantity(strval($abonnement1mois));
     $item->setName("Abonnement d'un mois pour $firstname $lastname");
-    $item->setPrice('80');
+    $item->setPrice('60');
     $item->setCurrency('EUR');
     array_push($tmp, $item);
 }
@@ -130,7 +130,7 @@ try {
     $payment->create($apiContext);
 } catch (\PPConnectionException $ex) {
     echo "Exception: " . $ex->getMessage() . PHP_EOL;
-    var_dump($ex->getData());   
+    var_dump($ex->getData());
     exit(1);
 }
 
