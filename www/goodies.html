@@ -1,0 +1,144 @@
+# -*- encoding:utf-8 -*-
+<%inherit file="includes/layout.html"/>
+
+<div class="container" style="margin-bottom: 60px;">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2>T-Shirt Coworking Metz</h2>
+
+            <div style="text-align: center">
+                <img src="images/tshirt-coworking.jpg" />
+            </div>
+
+            <p>Chaque T-shirt est imprimé par Paul (Maison d'édition Le mégot) sérigraphiste également installé dans les locaux de TCRM Blida.</p>
+
+            <p>Remplissez le formulaire ci-dessous pour passer commande :</p>
+
+            <form class="form-horizontal" role="form" method="POST" action="goodies-submit.php" style="margin-top: 40px;">
+                <div class="form-group">
+                    <label for="mail" class="col-sm-2 control-label">Adresse mail :</label>
+                    <div class="col-sm-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            required="required"
+                            id="mail"
+                            name="mail"
+                            placeholder="Adresse mail" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label">Prénom :</label>
+                    <div class="col-sm-4">
+                        <input
+                            type="text"
+                            id="firstname"
+                            required="required"
+                            name="firstname"
+                            class="form-control"
+                            placeholder="Prénom" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">Nom :</label>
+                    <div class="col-sm-4">
+                        <input
+                            type="text"
+                            name="lastname"
+                            required="required"
+                            id="lastname"
+                            class="form-control"
+                            placeholder="Nom">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="size" class="col-sm-2 control-label">Taille :</label>
+                    <div class="col-sm-4">
+                        <select
+                            class="form-control"
+                            required="required"
+                            id="size"
+                            name="size"
+                            >
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sexe" class="col-sm-2 control-label">Type :</label>
+                    <div class="col-sm-4">
+                        <select
+                            class="form-control"
+                            required="required"
+                            id="sexe"
+                            name="sexe"
+                            >
+                            <option value="Homme">Homme</option>
+                            <option value="Femme">Femme</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="quantite" class="col-sm-2 control-label">Quantité :</label>
+                    <div class="col-sm-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            required="required"
+                            id="quantite"
+                            name="quantite"
+                            style="width: 8em; display: inline; text-align: right;"
+                            value="1" />
+                            &nbsp;&nbsp;
+                            x 15 €
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="total" class="col-sm-2 control-label">Total :</label>
+                    <div class="col-sm-4">
+                        <input
+                            type="text"
+                            id="total"
+                            name="total"
+                            readonly="readonly"
+                            value="15"
+                            class="form-control"
+                            style="width: 8em; display: inline; text-align: right;"
+                        />&nbsp;&nbsp; €
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p class="help-block"><strong>Important :</strong> pour le moment nous ne faisons pas de livraison, le T-Shirt est à retirer sur place
+                        à l'Espace Coworking.</p>
+
+                        <button type="submit" class="btn btn-primary">Passer la commande</button>
+
+                        <span class="help-block">Note : sur la page Paypal, vous pouvez régler directement par CB via le lien « Payer sans ouvrir de compte ».<br />
+                        Après le paiement, n'hésitez pas à nous contacter si vous avez besoin d'une facture.
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /col-md-12 -->
+    </div><!-- /row -->
+</div><!-- /container -->
+<%block name="head">
+    ${parent.head()}
+    <script type="text/javascript">
+        function compute_total() {
+            $('[name="total"]').val($('[name="quantite"]').val() * 15);
+        }
+        $(document).ready(function() {
+            compute_total();
+            $('[name="quantite"]').on('change keyup', function() {
+                compute_total();
+            });
+        });
+    </script>
+</%block>
