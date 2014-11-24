@@ -17,6 +17,7 @@ bundles:
             - components/sequencejs/scripts/jquery.sequence.js
             - components/holderjs/holder.js
             - components/loremjs/lorem.js
+            - js/anchor.js
             - js/main.js
 
     main_css:
