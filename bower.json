@@ -5,8 +5,8 @@
         "font-awesome": "4.0.3",
         "modernizr": "2.7.1",
         "jquery": "2.1.0",
-        "sequencejs": "*",
-        "holderjs": "*",
-        "loremjs": "*"
+        "sequencejs": "#ed7ff8cb19",
+        "holderjs": "2.3.2",
+        "loremjs": "#8ba1db10c9"
     }
 }
