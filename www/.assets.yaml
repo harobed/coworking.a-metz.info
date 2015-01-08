@@ -14,6 +14,7 @@ bundles:
             - components/bootstrap/js/affix.js
             - components/bootstrap/js/collapse.js
             - components/bootstrap/js/carousel.js
+            - components/bootstrap/js/alert.js
             - components/sequencejs/scripts/jquery.sequence.js
             - components/holderjs/holder.js
             - components/loremjs/lorem.js
