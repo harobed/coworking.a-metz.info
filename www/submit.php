@@ -43,7 +43,7 @@ use PayPal\Rest\ApiContext;
 session_start();
 
 $payer = new Payer();
-$payer->setPayment_method("paypal");
+$payer->setPaymentMethod("paypal");
 
 $amount = new Amount();
 $amount->setCurrency("EUR");
@@ -111,17 +111,17 @@ $item_list->setItems($tmp);
 $transaction = new Transaction();
 $transaction->setAmount($amount);
 $transaction->setDescription("Commande en provenance du site Coworking");
-$transaction->setItem_list($item_list);
+$transaction->setItemList($item_list);
 
 $baseUrl = getBaseUrl();
 $redirectUrls = new RedirectUrls();
-$redirectUrls->setReturn_url("$baseUrl/ExecutePayment.php?success=true");
-$redirectUrls->setCancel_url("$baseUrl/ExecutePayment.php?success=false");
+$redirectUrls->setReturnUrl("$baseUrl/ExecutePayment.php?success=true");
+$redirectUrls->setCancelUrl("$baseUrl/ExecutePayment.php?success=false");
 
 $payment = new Payment();
 $payment->setIntent("sale");
 $payment->setPayer($payer);
-$payment->setRedirect_urls($redirectUrls);
+$payment->setRedirectUrls($redirectUrls);
 $payment->setTransactions(array($transaction));
 
 $apiContext = new ApiContext($cred, 'Request' . time());
