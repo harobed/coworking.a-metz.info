@@ -61,7 +61,7 @@ $tmp = Array();
 if ($adhesion) {
     $item = new Item();
     $item->setQuantity("1");
-    $item->setName("Adhesion de $firstname $lastname");
+    $item->setName("Adhesion de $firstname $lastname $mail");
     $item->setPrice('10');
     $item->setCurrency('EUR');
     array_push($tmp, $item);
@@ -70,7 +70,7 @@ if ($adhesion) {
 if ($unit_ticket > 0) {
     $item = new Item();
     $item->setQuantity(strval($unit_ticket));
-    $item->setName("Ticket à l'unité pour $firstname $lastname");
+    $item->setName("Ticket à l'unité pour $firstname $lastname $mail");
     $item->setPrice('6');
     $item->setCurrency('EUR');
     array_push($tmp, $item);
@@ -79,7 +79,7 @@ if ($unit_ticket > 0) {
 if ($ticket10 > 0) {
     $item = new Item();
     $item->setQuantity(strval($ticket10));
-    $item->setName("Carnet de 10 tickets pour $firstname $lastname");
+    $item->setName("Carnet de 10 tickets pour $firstname $lastname $mail");
     $item->setPrice('40');
     $item->setCurrency('EUR');
     array_push($tmp, $item);
@@ -88,7 +88,7 @@ if ($ticket10 > 0) {
 if ($abonnement1mois > 0) {
     $item = new Item();
     $item->setQuantity(strval($abonnement1mois));
-    $item->setName("Abonnement d'un mois pour $firstname $lastname");
+    $item->setName("Abonnement d'un mois pour $firstname $lastname $mail");
     $item->setPrice('60');
     $item->setCurrency('EUR');
     array_push($tmp, $item);
@@ -97,7 +97,7 @@ if ($abonnement1mois > 0) {
 if ($donation) {
     $item = new Item();
     $item->setQuantity("1");
-    $item->setName("Don de $firstname $lastname");
+    $item->setName("Don de $firstname $lastname $mail");
     $item->setPrice(strval($donation));
     $item->setCurrency('EUR');
     array_push($tmp, $item);
